@@ -3,7 +3,7 @@
 (use-package windmove
   :ensure nil
   :custom (windmove-wrap-around t)
-  :config (windmove-default-keybindings))
+  :hook (after-init . windmove-default-keybindings))
 
 (use-package winner
   :ensure nil
