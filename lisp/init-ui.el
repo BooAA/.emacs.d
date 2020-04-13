@@ -2,8 +2,6 @@
 
 (use-package zenburn-theme)
 
-(use-package solarized-theme)
-
 (use-package paren
   :ensure nil
   :hook (after-init . show-paren-mode))
