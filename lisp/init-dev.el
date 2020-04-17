@@ -24,11 +24,6 @@
 (use-package counsel-projectile
   :hook (counsel-mode . counsel-projectile-mode))
 
-(use-package ripgrep)
-
-(use-package magit
-  :bind ("C-x g" . magit-status))
-
 (use-package counsel-dash
   :custom ((dash-docs-docsets-path (expand-file-name "var/docsets" user-emacs-directory))
            (dash-docs-common-docsets '("C" "Common Lisp"))
