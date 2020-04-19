@@ -6,10 +6,6 @@
 (use-package sly
   :commands sly)
 
-(use-package ivy-xref
-  :custom ((xref-show-definitions-function #'ivy-xref-show-defs)
-           (xref-show-xrefs-function #'ivy-xref-show-xrefs)))
-
 (use-package flymake
   :ensure nil
   :bind (:map flymake-mode-map
@@ -20,9 +16,6 @@
   :custom (projectile-completion-system 'ivy)
   :bind ("C-x p" . projectile-command-map)
   :hook (after-init . projectile-mode))
-
-(use-package counsel-projectile
-  :hook (counsel-mode . counsel-projectile-mode))
 
 (use-package magit
   :bind ("C-x g" . magit-status))
