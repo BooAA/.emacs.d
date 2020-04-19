@@ -23,6 +23,7 @@
     (ivy-mark)))
 
 (use-package counsel
+  :custom (counsel-grep-base-command "rg -M 120 --with-filename --no-heading --line-number --color never %s")
   :bind (:map counsel-mode-map
          ([remap jump-to-register] . counsel-register)
          ("C-c s" . counsel-rg)
