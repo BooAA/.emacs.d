@@ -12,9 +12,15 @@
          ("C-c z" . ivy-resume)
          :map ivy-minibuffer-map
          ("TAB" . ivy-partial)
-         ("C-c m" . ivy-mark)
-         ("C-c u" . ivy-unmark))
+         ("C-SPC" . booaa/ivy-toggle-mark))
   :hook (after-init . ivy-mode))
+
+(defun booaa/ivy-toggle-mark ()
+  "mark or unmark current candidate and move forward"
+  (interactive)
+  (if (ivy--marked-p)
+      (ivy-unmark)
+    (ivy-mark)))
 
 (use-package counsel
   :bind (:map counsel-mode-map
