@@ -2,8 +2,8 @@
 
 (use-package swiper
   :custom (swiper-verbose nil)
-  :bind (("C-M-s" . swiper)
-         ("C-M-r" . swiper-backward)))
+  :bind (("C-M-s" . counsel-grep-or-swiper)
+         ("C-M-r" . counsel-grep-or-swiper-backward)))
 
 (setq isearch-allow-scroll t
       isearch-lazy-count t
