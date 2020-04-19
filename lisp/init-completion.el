@@ -19,7 +19,8 @@
 (use-package counsel
   :bind (:map counsel-mode-map
          ([remap jump-to-register] . counsel-register)
-         ("C-c s" . counsel-rg))
+         ("C-c s" . counsel-rg)
+         ("C-c g" . counsel-git))
   :hook (ivy-mode . counsel-mode))
 
 (use-package smex)
