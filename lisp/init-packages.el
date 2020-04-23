@@ -14,4 +14,34 @@
 
 (use-package no-littering :demand t)
 
+(setq package-selected-packages
+      '(
+        ;; buffer management
+        buffer-move
+        ibuffer-vc
+        ;; completion
+        counsel
+        ivy
+        company
+        ;; search and replace
+        swiper
+        ;; config and packages management
+        use-package
+        no-littering
+        ;; development tools
+        eglot
+        sly
+        projectile
+        magit
+        counsel-dash
+        ;; misc
+        keycast
+        google-this
+        ;; theme
+        zenburn-theme
+        ;; soft dependency
+        smex
+        wgrep
+        ))
+
 (provide 'init-packages)
