@@ -8,7 +8,8 @@
 (defun booaa/windmove-setup-keybindings ()
   (windmove-default-keybindings)
   (windmove-swap-states-default-keybindings '(ctrl shift))
-  (windmove-delete-default-keybindings))
+  (windmove-delete-default-keybindings)
+  (windmove-display-default-keybindings))
 
 (use-package winner
   :ensure nil
