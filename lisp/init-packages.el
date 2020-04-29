@@ -17,7 +17,6 @@
 (setq package-selected-packages
       '(
         ;; buffer management
-        buffer-move
         ibuffer-vc
         ;; completion
         counsel
