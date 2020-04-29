@@ -1,6 +1,7 @@
 ;;; -*- lexical-binding: t -*-
 
 (use-package windmove
+  :init (setq switch-to-buffer-obey-display-actions t)
   :ensure nil
   :custom (windmove-wrap-around t)
   :hook (after-init . booaa/windmove-setup-keybindings))
