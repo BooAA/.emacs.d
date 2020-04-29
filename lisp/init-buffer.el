@@ -12,12 +12,6 @@
            (auto-revert-verbose nil))
   :hook (after-init . global-auto-revert-mode))
 
-(use-package buffer-move
-  :bind (("C-S-<up>" . 'buf-move-up)
-         ("C-S-<down>" . 'buf-move-down)
-         ("C-S-<left>" . 'buf-move-left)
-         ("C-S-<right>" . 'buf-move-right)))
-
 (use-package ibuffer
   :ensure nil
   :custom (ibuffer-show-empty-filter-groups nil)
