@@ -3,7 +3,12 @@
 (use-package windmove
   :ensure nil
   :custom (windmove-wrap-around t)
-  :hook (after-init . windmove-default-keybindings))
+  :hook (after-init . booaa/windmove-setup-keybindings))
+
+(defun booaa/windmove-setup-keybindings ()
+  (windmove-default-keybindings)
+  (windmove-swap-states-default-keybindings '(ctrl shift))
+  (windmove-delete-default-keybindings))
 
 (use-package winner
   :ensure nil
