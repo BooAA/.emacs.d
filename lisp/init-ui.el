@@ -23,6 +23,8 @@
 (defun booaa/init-ui ()
   (setq inhibit-startup-screen t)
   (defalias 'yes-or-no-p 'y-or-n-p)
+  (setq confirm-kill-emacs nil
+        confirm-kill-processes nil)
   ;; (setq initial-buffer-choice 'booaa/init-buffer)
   (blink-cursor-mode -1)
   (fringe-mode 2)
