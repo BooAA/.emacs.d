@@ -1,9 +1,14 @@
 ;;; -*- lexical-binding: t -*-
 
+(setq python-shell-interpreter "python3")
+
 (use-package eglot
-  :commands eglot)
+  :commands eglot
+  :config (setf (cdr (assoc '(c++-mode c-mode) eglot-server-programs)) '("clangd")))
 
 (use-package sly
+  :custom ((inferior-lisp-program "sbcl")
+           (sly-symbol-completion-mode nil))
   :commands sly)
 
 (use-package flymake
