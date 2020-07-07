@@ -36,12 +36,13 @@
         bash-completion
         ;; misc
         keycast
-        google-this
+        request
         ;; theme
         zenburn-theme
         ;; soft dependency
         smex
         wgrep
+        request
         ))
 
 (provide 'init-packages)

@@ -23,10 +23,12 @@
     (ivy-mark)))
 
 (use-package counsel
-  :custom (counsel-grep-base-command "rg -M 120 --with-filename --no-heading --line-number --color never %s")
+  :custom ((counsel-grep-base-command "rg -M 120 --with-filename --no-heading --line-number --color never %s")
+           (counsel-search-engine 'google))
   :bind (:map counsel-mode-map
          ([remap jump-to-register] . counsel-register)
-         ("C-c s" . counsel-rg))
+         ("C-c s" . counsel-rg)
+         ("C-c /" . counsel-search))
   :hook (ivy-mode . counsel-mode))
 
 (use-package smex)
