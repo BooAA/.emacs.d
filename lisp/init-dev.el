@@ -11,6 +11,11 @@
            (sly-symbol-completion-mode nil))
   :commands sly)
 
+(use-package project
+  :ensure nil
+  :bind (("C-x p s" . counsel-rg)
+         ("C-x p !" . project-shell)))
+
 (use-package flymake
   :ensure nil
   :bind (:map flymake-mode-map
