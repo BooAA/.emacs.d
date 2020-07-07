@@ -33,6 +33,8 @@
         projectile
         magit
         counsel-dash
+        ;; shell
+        bash-completion
         ;; misc
         keycast
         google-this
