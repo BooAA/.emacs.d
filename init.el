@@ -26,7 +26,7 @@
 (require 'init-window)
 (require 'init-buffer)
 (require 'init-dired)
-(require 'init-eshell)
+(require 'init-shell)
 (require 'init-completion)
 (require 'init-search)
 (require 'init-dev)
