@@ -17,11 +17,6 @@
          ("M-n" . flymake-goto-next-error)
          ("M-p" . flymake-goto-prev-error)))
 
-(use-package projectile
-  :custom (projectile-completion-system 'ivy)
-  :bind ("C-x p" . projectile-command-map)
-  :hook (after-init . projectile-mode))
-
 (use-package magit
   :bind ("C-x g" . magit-status))
 

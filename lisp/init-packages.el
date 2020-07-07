@@ -30,7 +30,6 @@
         ;; development tools
         eglot
         sly
-        projectile
         magit
         counsel-dash
         ;; shell
