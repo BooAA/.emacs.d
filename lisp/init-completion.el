@@ -26,8 +26,7 @@
   :custom (counsel-grep-base-command "rg -M 120 --with-filename --no-heading --line-number --color never %s")
   :bind (:map counsel-mode-map
          ([remap jump-to-register] . counsel-register)
-         ("C-c s" . counsel-rg)
-         ("C-c g" . counsel-git))
+         ("C-c s" . counsel-rg))
   :hook (ivy-mode . counsel-mode))
 
 (use-package smex)
