@@ -5,6 +5,7 @@
   :custom ((ivy-wrap t)
            (ivy-use-selectable-prompt t)
            (ivy-count-format "%d/%d ")
+           (ivy-display-style nil)
            (ivy-read-action-function 'ivy-read-action-ivy "using ivy interface when selecting ivy action")
            (ivy-on-del-error-function 'ignore "when no input text, backspace won't quit")
            (ivy-ignore-buffers '("\\` " "\\`\\*") "ignore buffers start with space and asterisks"))
