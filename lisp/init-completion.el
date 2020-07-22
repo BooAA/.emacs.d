@@ -52,7 +52,7 @@
   :bind ("M-/" . hippie-expand))
 
 (use-package company
-  :init (setq completion-styles '(basic partial-completion)
+  :init (setq completion-styles '(basic flex partial-completion)
               completion-ignore-case t
               read-file-name-completion-ignore-case t
               read-buffer-completion-ignore-case t)
