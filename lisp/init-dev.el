@@ -19,6 +19,7 @@
 
 (use-package flymake
   :ensure nil
+  :custom (flymake-wrap-around t)
   :bind (:map flymake-mode-map
          ("M-n" . flymake-goto-next-error)
          ("M-p" . flymake-goto-prev-error)))
