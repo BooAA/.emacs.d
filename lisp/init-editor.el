@@ -17,6 +17,8 @@
 
 (use-package recentf
   :ensure nil
+  :custom (recentf-max-saved-items 50)
+  :bind ("C-c f" . recentf-open-files)
   :hook (after-init . recentf-mode))
 
 (use-package delsel
