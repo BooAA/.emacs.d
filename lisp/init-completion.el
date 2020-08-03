@@ -29,7 +29,9 @@
   :bind (:map counsel-mode-map
          ([remap jump-to-register] . counsel-register)
          ("C-c s" . counsel-rg)
-         ("C-c /" . counsel-search))
+         ("C-c /" . counsel-search)
+         ("C-M-i" . counsel-company)
+         ([remap recentf-open-files] . counsel-recentf))
   :hook (ivy-mode . counsel-mode))
 
 (use-package smex)
