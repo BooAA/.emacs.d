@@ -2,14 +2,19 @@
 
 (setq python-shell-interpreter "python3")
 
+(setq gdb-many-windows t
+      gdb-restore-window-configuration-after-quit t)
+
 (use-package eglot
   :commands eglot
   :config (setf (cdr (assoc '(c++-mode c-mode) eglot-server-programs)) '("clangd")))
 
-(use-package sly
-  :custom ((inferior-lisp-program "sbcl")
-           (sly-symbol-completion-mode nil))
-  :commands sly)
+;; (use-package sly
+;;   :custom (inferior-lisp-program "sbcl")
+;;   :commands sly)
+
+(require 'sly)
+(setq inferior-lisp-program "sbcl")
 
 (use-package project
   :ensure nil
