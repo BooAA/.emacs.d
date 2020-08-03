@@ -1,7 +1,8 @@
 ;;; -*- lexical-binding: t -*-
 
+(setq enable-recursive-minibuffers t)
+
 (use-package ivy
-  :init (setq enable-recursive-minibuffers t)
   :custom ((ivy-wrap t)
            (ivy-use-selectable-prompt t)
            (ivy-count-format "%d/%d ")
@@ -53,11 +54,12 @@
            (hippie-expand-verbose nil))
   :bind ("M-/" . hippie-expand))
 
+(setq completion-styles '(basic flex)
+      completion-ignore-case t
+      read-file-name-completion-ignore-case t
+      read-buffer-completion-ignore-case t)
+
 (use-package company
-  :init (setq completion-styles '(basic flex partial-completion)
-              completion-ignore-case t
-              read-file-name-completion-ignore-case t
-              read-buffer-completion-ignore-case t)
   :custom ((company-idle-delay 0.25)
            (company-minimum-prefix-length 2)
            (company-tooltip-align-annotations t)
