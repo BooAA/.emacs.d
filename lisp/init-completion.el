@@ -54,7 +54,7 @@
            (hippie-expand-verbose nil))
   :bind ("M-/" . hippie-expand))
 
-(setq completion-styles '(basic flex)
+(setq completion-styles '(flex)
       completion-ignore-case t
       read-file-name-completion-ignore-case t
       read-buffer-completion-ignore-case t)
