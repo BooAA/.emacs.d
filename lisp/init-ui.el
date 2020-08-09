@@ -31,8 +31,10 @@
   (column-number-mode)
   (setq-default mode-line-format '((vc-mode vc-mode) "  "
                                    mode-line-buffer-identification "  "
-                                   mode-line-position "  "
-                                   mode-line-misc-info mode-line-end-spaces))
+                                   mode-line-position))
+  (setq-default frame-title-format '((:eval (alist-get 'name (tab-bar--current-tab))) "  "
+                                     display-time-string))
+  
   (load-theme 'zenburn t))
 
 (add-hook 'after-init-hook 'booaa/init-ui)
