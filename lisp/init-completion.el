@@ -4,6 +4,7 @@
 
 (use-package ivy
   :custom ((ivy-wrap t)
+           (ivy-height 15)
            (ivy-use-selectable-prompt t)
            (ivy-count-format "%d/%d ")
            (ivy-display-style nil)
