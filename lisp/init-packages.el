@@ -29,6 +29,7 @@
         no-littering
         ;; development tools
         eglot
+        realgud
         sly
         magit
         counsel-dash
@@ -42,7 +43,6 @@
         ;; soft dependency
         smex
         wgrep
-        request
         ))
 
 (provide 'init-packages)
