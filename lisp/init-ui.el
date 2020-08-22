@@ -26,6 +26,7 @@
   (setq confirm-kill-emacs nil
         confirm-kill-processes nil)
   ;; (setq initial-buffer-choice 'booaa/init-buffer)
+  (setq ring-bell-function 'ignore)
   (blink-cursor-mode -1)
   (fringe-mode 2)
   (column-number-mode)
