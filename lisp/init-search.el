@@ -7,7 +7,7 @@
 
 (setq isearch-allow-scroll t
       isearch-lazy-count t
-      lazy-highlight-initiald-delay 0.2
+      lazy-highlight-initial-delay 0.2
       search-default-mode t)
 
 (define-key isearch-mode-map (kbd "M-s s") 'swiper-isearch-toggle)
