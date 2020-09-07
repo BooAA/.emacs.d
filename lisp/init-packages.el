@@ -38,6 +38,7 @@
         ;; misc
         keycast
         request
+        olivetti
         ;; theme
         zenburn-theme
         ;; soft dependency
