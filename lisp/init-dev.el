@@ -7,6 +7,7 @@
 
 (use-package eglot
   :commands eglot
+  :custom (eglot-autoshutdown t)
   :config (setf (cdr (assoc '(c++-mode c-mode) eglot-server-programs)) '("clangd")))
 
 (use-package sly
