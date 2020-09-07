@@ -9,8 +9,6 @@
   :commands eglot
   :config (setf (cdr (assoc '(c++-mode c-mode) eglot-server-programs)) '("clangd")))
 
-(use-package realgud)
-
 (use-package sly
   :custom (inferior-lisp-program "sbcl")
   :commands sly)

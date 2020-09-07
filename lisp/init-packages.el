@@ -29,7 +29,6 @@
         no-littering
         ;; development tools
         eglot
-        realgud
         sly
         magit
         counsel-dash
