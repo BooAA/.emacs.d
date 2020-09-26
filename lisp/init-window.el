@@ -1,16 +1,20 @@
 ;;; -*- lexical-binding: t -*-
 
+(setq switch-to-buffer-obey-display-actions t)
+
 (use-package windmove
-  :init (setq switch-to-buffer-obey-display-actions t)
   :ensure nil
   :custom (windmove-wrap-around t)
-  :hook (after-init . booaa/windmove-setup-keybindings))
+  :hook ((after-init . windmove-default-keybindings)
+         (after-init . windmove-swap-states-default-keybindings)
+         (after-init . windmove-delete-default-keybindings)
+         (after-init . windmove-display-default-keybindings)))
 
-(defun booaa/windmove-setup-keybindings ()
-  (windmove-default-keybindings)
-  (windmove-swap-states-default-keybindings '(ctrl shift))
-  (windmove-delete-default-keybindings)
-  (windmove-display-default-keybindings))
+;; (defun booaa/windmove-setup-keybindings ()
+;;   (windmove-default-keybindings)
+;;   (windmove-swap-states-default-keybindings)
+;;   (windmove-delete-default-keybindings)
+;;   (windmove-display-default-keybindings))
 
 (use-package winner
   :ensure nil
