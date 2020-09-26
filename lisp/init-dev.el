@@ -7,7 +7,10 @@
 
 (use-package eglot
   :commands eglot
-  :custom (eglot-autoshutdown t)
+  :custom ((eglot-autoshutdown t)
+           (eglot-autoreconnect 1)
+           (eglot-connect-timeout 5)
+           (eglot-events-buffer-size 0))
   :config (setf (cdr (assoc '(c++-mode c-mode) eglot-server-programs)) '("clangd")))
 
 (use-package sly
