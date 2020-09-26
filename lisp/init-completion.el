@@ -5,7 +5,6 @@
 (use-package ivy
   :custom ((ivy-wrap t)
            (ivy-height 15)
-           (ivy-use-selectable-prompt t)
            (ivy-count-format "%d/%d ")
            (ivy-display-style nil)
            (ivy-read-action-function 'ivy-read-action-ivy "using ivy interface when selecting ivy action")
