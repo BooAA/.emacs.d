@@ -31,7 +31,6 @@
         eglot
         sly
         magit
-        counsel-dash
         ;; shell
         bash-completion
         ;; misc

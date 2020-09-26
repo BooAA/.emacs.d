@@ -30,11 +30,6 @@
 (use-package magit
   :bind ("C-x g" . magit-status))
 
-(use-package counsel-dash
-  :custom ((dash-docs-docsets-path (expand-file-name "var/docsets" user-emacs-directory))
-           (dash-docs-common-docsets '("C" "Common Lisp"))
-           (dash-docs-enable-debugging nil))
-  :commands (counsel-dash-install-docset counsel-dash-install-user-docset)
-  :bind (("C-c h" . counsel-dash)))
+(global-set-key (kbd "C-c h") 'man)
 
 (provide 'init-dev)
