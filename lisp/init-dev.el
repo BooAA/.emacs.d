@@ -34,5 +34,6 @@
   :bind ("C-x g" . magit-status))
 
 (global-set-key (kbd "C-c h") 'man)
+(global-set-key (kbd "<f5>") 'compile)
 
 (provide 'init-dev)
