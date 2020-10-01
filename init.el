@@ -8,7 +8,7 @@
 
 (defun booaa/reset-after-startup ()
   (setq gc-cons-threshold 100000000
-        gc-cons-percentage 0.3
+        gc-cons-percentage 0.5
         file-name-handler-alist booaa/file-name-handler-alist))
 
 (add-hook 'emacs-startup-hook 'booaa/reset-after-startup)
