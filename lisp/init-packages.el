@@ -31,6 +31,7 @@
         eglot
         sly
         magit
+        imenu-list
         ;; shell
         bash-completion
         ;; misc

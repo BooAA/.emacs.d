@@ -33,6 +33,9 @@
 (use-package magit
   :bind ("C-x g" . magit-status))
 
+(use-package imenu-list
+  :bind ("C-'" . imenu-list-smart-toggle))
+
 (global-set-key (kbd "C-c h") 'man)
 (global-set-key (kbd "<f5>") 'compile)
 
