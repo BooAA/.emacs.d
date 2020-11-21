@@ -32,13 +32,16 @@
         sly
         magit
         imenu-list
+        markdown-mode
+        web-mode
         ;; shell
-        bash-completion
+        shx
         ;; misc
         keycast
         request
         olivetti
-        ;; theme
+        exwm
+        ;; UI
         zenburn-theme
         ;; soft dependency
         smex
