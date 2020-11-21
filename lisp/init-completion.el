@@ -72,4 +72,19 @@
   :hook ((after-init . global-company-mode)
          (company-mode . company-tng-configure-default)))
 
+(defalias 'ev  'emacs-version)
+(defalias 'eit 'emacs-init-time)
+
+(defalias 'plp 'package-list-packages)
+(defalias 'pi 'package-install)
+(defalias 'pd  'package-delete)
+(defalias 'pa  'package-autoremove)
+
+(defalias 'ev-b 'eval-buffer)
+(defalias 'ev-r 'eval-region)
+
+(defalias 'cf 'copy-file)
+(defalias 'df 'delete-file)
+(defalias 'rf 'rename-file)
+
 (provide 'init-completion)
