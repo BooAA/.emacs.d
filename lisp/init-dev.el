@@ -39,4 +39,25 @@
 (global-set-key (kbd "C-c h") 'man)
 (global-set-key (kbd "<f5>") 'compile)
 
+(setq browse-url-browser-function 'browse-url-chromium)
+(add-to-list 'browse-url-handlers '("\\`file://.*\\(\\.md\\)\\|\\(\\.markdown\\)" . browse-url--browser))
+
+(global-set-key (kbd "C-c C-z .") 'browse-url-at-point)
+(global-set-key (kbd "C-c C-z b") 'browse-url-of-buffer)
+(global-set-key (kbd "C-c C-z r") 'browse-url-of-region)
+(global-set-key (kbd "C-c C-z u") 'browse-url)
+(global-set-key (kbd "C-c C-z v") 'browse-url-of-file)
+
+(use-package markdown-mode
+  :custom ((markdown-enable-math t)
+           (markdown-fontify-code-blocks-natively t))
+  :mode (("\\.md\\'" . gfm-mode)
+         ("\\.markdown\\'" . gfm-mode)))
+
+(use-package web-mode
+  :custom ((web-mode-markup-indent-offset 2)
+           (web-mode-css-indent-offset 2)
+           (web-mode-code-indent-offset 2))
+  :mode ("\\.html?\\'" . web-mode))
+
 (provide 'init-dev)
