@@ -16,7 +16,8 @@
 
 (use-package tab-bar
   :ensure nil
-  :custom ((tab-bar-show nil)
+   :init (custom-set-variables '(tab-bar-show nil))
+   :custom (;; (tab-bar-show nil)
            (tab-bar-new-tab-choice "*scratch*")
            (tab-bar-select-tab-modifiers '(control super)))
   :hook (after-init . tab-bar-mode))
