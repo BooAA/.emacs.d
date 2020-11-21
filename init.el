@@ -7,7 +7,7 @@
 (setq file-name-handler-alist nil)
 
 (defun booaa/reset-after-startup ()
-  (setq gc-cons-threshold 100000000
+  (setq gc-cons-threshold 200000000
         gc-cons-percentage 0.5
         file-name-handler-alist booaa/file-name-handler-alist))
 
