@@ -23,6 +23,24 @@
 (global-set-key (kbd "C-c C-z u") 'browse-url)
 (global-set-key (kbd "C-c C-z v") 'browse-url-of-file)
 
+(use-package engine-mode
+  :hook (after-init . engine-mode))
+
+(defengine google
+  "http://www.google.com/search?ie=utf-8&oe=utf-8&q=%s"
+  :keybinding "g")
+
+(defengine wikipedia
+  "http://www.wikipedia.org/search-redirect.php?language=en&go=Go&search=%s"
+  :keybinding "w")
+
+(defengine youtube
+  "http://www.youtube.com/results?aq=f&oq=&search_query=%s"
+  :keybinding "y")
+
+(defengine wolfram-alpha
+  "http://www.wolframalpha.com/input/?i=%s")
+
 (use-package exwm
   :commands (exwm-enable)
   :custom ((exwm-workspace-number 4)
