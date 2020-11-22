@@ -41,6 +41,7 @@
         request
         olivetti
         exwm
+        engine-mode
         ;; UI
         zenburn-theme
         ;; soft dependency
