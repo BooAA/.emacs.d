@@ -7,6 +7,6 @@
   :config (add-to-list 'eshell-modules-list 'eshell-tramp))
 
 (use-package shx
-  :hook (shell-mode . shx-mode))
+  :hook (after-init . shx-global-mode))
 
 (provide 'init-shell)
