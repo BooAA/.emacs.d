@@ -14,6 +14,15 @@
            (youtube-dl-slow-rate "10M"))
   :commands (youtube-dl youtube-dl-playlist youtube-dl-list))
 
+(setq browse-url-browser-function 'browse-url-chromium)
+(add-to-list 'browse-url-handlers '("\\`file://.*\\(\\.md\\)\\|\\(\\.markdown\\)" . browse-url--browser))
+
+(global-set-key (kbd "C-c C-z .") 'browse-url-at-point)
+(global-set-key (kbd "C-c C-z b") 'browse-url-of-buffer)
+(global-set-key (kbd "C-c C-z r") 'browse-url-of-region)
+(global-set-key (kbd "C-c C-z u") 'browse-url)
+(global-set-key (kbd "C-c C-z v") 'browse-url-of-file)
+
 (use-package exwm
   :commands (exwm-enable)
   :custom ((exwm-workspace-number 4)
