@@ -38,8 +38,8 @@
   :ensure nil
   :hook (after-init . savehist-mode))
 
-(global-set-key (kbd "M-z") 'zap-up-to-char)
-(global-set-key (kbd "M-Z") 'zap-to-char)
-(global-set-key (kbd "C-%") 'replace-string)
+(global-set-key (kbd "M-z") #'zap-up-to-char)
+(global-set-key (kbd "M-Z") #'zap-to-char)
+(global-set-key (kbd "C-%") #'replace-string)
 
 (provide 'init-editor)

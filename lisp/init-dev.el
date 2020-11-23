@@ -36,8 +36,8 @@
 (use-package imenu-list
   :bind ("C-'" . imenu-list-smart-toggle))
 
-(global-set-key (kbd "C-c h") 'man)
-(global-set-key (kbd "<f5>") 'compile)
+(global-set-key (kbd "C-c h") #'man)
+(global-set-key (kbd "<f5>") #'compile)
 
 (use-package markdown-mode
   :custom ((markdown-enable-math t)
