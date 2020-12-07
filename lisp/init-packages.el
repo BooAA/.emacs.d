@@ -42,6 +42,7 @@
         olivetti
         exwm
         engine-mode
+        markdown-mode
         ;; UI
         zenburn-theme
         ;; soft dependency
