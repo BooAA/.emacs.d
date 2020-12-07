@@ -6,7 +6,7 @@
   :commands (keycast-mode))
 
 (use-package olivetti
-  :custom (olivetti-body-width 80))
+  :custom (olivetti-body-width 0.7))
 
 (use-package youtube-dl
   :load-path "site-lisp/youtube-dl-emacs"
