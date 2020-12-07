@@ -50,4 +50,7 @@
         wgrep
         ))
 
+;; (package-quickstart-refresh)
+(setq package-quickstart t)
+
 (provide 'init-packages)
