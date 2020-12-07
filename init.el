@@ -26,6 +26,7 @@
 (require 'init-window)
 (require 'init-buffer)
 (require 'init-dired)
+(require 'init-mail)
 (require 'init-shell)
 (require 'init-completion)
 (require 'init-search)
