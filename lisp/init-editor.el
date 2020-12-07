@@ -41,5 +41,6 @@
 (global-set-key (kbd "M-z") #'zap-up-to-char)
 (global-set-key (kbd "M-Z") #'zap-to-char)
 (global-set-key (kbd "C-%") #'replace-string)
+(global-set-key (kbd "C-x r I") #'string-insert-rectangle)
 
 (provide 'init-editor)
