@@ -29,10 +29,10 @@
         no-littering
         ;; development tools
         eglot
+        pyvenv
         sly
         magit
         imenu-list
-        markdown-mode
         web-mode
         ;; shell
         shx
