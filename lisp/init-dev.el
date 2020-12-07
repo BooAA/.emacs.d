@@ -13,6 +13,9 @@
            (eglot-events-buffer-size 0))
   :config (setf (cdr (assoc '(c++-mode c-mode) eglot-server-programs)) '("clangd")))
 
+(use-package pyvenv
+  :commands (pyvenv-activate pyvenv-workon))
+
 (use-package sly
   :custom (inferior-lisp-program "sbcl")
   :commands sly)
