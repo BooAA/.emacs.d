@@ -42,12 +42,6 @@
 (global-set-key (kbd "C-c h") #'man)
 (global-set-key (kbd "<f5>") #'compile)
 
-(use-package markdown-mode
-  :custom ((markdown-enable-math t)
-           (markdown-fontify-code-blocks-natively t))
-  :mode (("\\.md\\'" . gfm-mode)
-         ("\\.markdown\\'" . gfm-mode)))
-
 (use-package web-mode
   :custom ((web-mode-markup-indent-offset 2)
            (web-mode-css-indent-offset 2)

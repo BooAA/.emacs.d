@@ -23,6 +23,12 @@
 (global-set-key (kbd "C-c C-z u") #'browse-url)
 (global-set-key (kbd "C-c C-z v") #'browse-url-of-file)
 
+(use-package markdown-mode
+  :custom ((markdown-enable-math t)
+           (markdown-fontify-code-blocks-natively t))
+  :mode (("\\.md\\'" . gfm-mode)
+         ("\\.markdown\\'" . gfm-mode)))
+
 (use-package engine-mode
   :hook (after-init . engine-mode))
 
