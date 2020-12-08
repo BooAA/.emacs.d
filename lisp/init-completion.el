@@ -61,16 +61,16 @@
 
 (use-package company
   :custom ((company-idle-delay 0.25)
-           (company-minimum-prefix-length 2)
+           (company-minimum-prefix-length 3)
            (company-tooltip-align-annotations t)
            (company-selection-wrap-around t)
            (company-dabbrev-ignore-case t)
            (company-dabbrev-downcase nil)
            (company-dabbrev-code-ignore-case t)
            (company-dabbrev-code-everwhere t)
-           (company-backends '(company-capf company-files (company-dabbrev-code company-keyword) company-dabbrev)))
+           (company-backends '(company-capf company-files (company-dabbrev-code company-keywords) company-dabbrev)))
   :hook ((after-init . global-company-mode)
-         (company-mode . company-tng-configure-default)))
+         (company-mode . company-tng-mode)))
 
 (defalias 'ev  'emacs-version)
 (defalias 'eit 'emacs-init-time)
