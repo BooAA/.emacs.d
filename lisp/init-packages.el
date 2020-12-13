@@ -32,7 +32,6 @@
         pyvenv
         sly
         magit
-        imenu-list
         web-mode
         ;; shell
         shx
@@ -41,7 +40,6 @@
         request
         olivetti
         exwm
-        engine-mode
         markdown-mode
         ;; UI
         zenburn-theme
