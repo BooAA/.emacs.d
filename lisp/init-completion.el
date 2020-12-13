@@ -2,6 +2,8 @@
 
 (setq enable-recursive-minibuffers t)
 
+(minibuffer-depth-indicate-mode)
+
 (use-package ivy
   :custom ((ivy-wrap t)
            (ivy-height 15)
