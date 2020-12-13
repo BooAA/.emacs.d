@@ -20,12 +20,6 @@
   :custom (inferior-lisp-program "sbcl")
   :commands sly)
 
-(use-package project
-  :ensure nil
-  :bind (([remap project-find-file] . counsel-git)
-         ("C-x p s" . counsel-git-grep)
-         ("C-x p !" . project-shell)))
-
 (use-package flymake
   :ensure nil
   :custom (flymake-wrap-around t)
