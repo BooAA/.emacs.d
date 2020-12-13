@@ -79,7 +79,10 @@
            (company-dabbrev-downcase nil)
            (company-dabbrev-code-ignore-case t)
            (company-dabbrev-code-everwhere t)
-           (company-backends '(company-capf company-files (company-dabbrev-code company-keywords) company-dabbrev)))
+           (company-backends '(company-capf
+                               company-files
+                               (company-dabbrev-code company-keywords)
+                               company-dabbrev)))
   :hook ((after-init . global-company-mode)
          (company-mode . company-tng-mode)))
 
