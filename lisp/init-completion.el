@@ -9,9 +9,9 @@
            (ivy-height 15)
            (ivy-count-format "%d/%d ")
            (ivy-display-style nil)
-           (ivy-read-action-function 'ivy-read-action-ivy "using ivy interface when selecting ivy action")
-           (ivy-on-del-error-function 'ignore "when no input text, backspace won't quit")
-           (ivy-ignore-buffers '("\\` " "\\`\\*") "ignore buffers start with space and asterisks"))
+           (ivy-read-action-function 'ivy-read-action-ivy)
+           (ivy-on-del-error-function 'ignore)
+           (ivy-ignore-buffers '("\\` " "\\`\\*")))
   :bind (:map ivy-mode-map
          ("C-c z" . ivy-resume)
          :map ivy-minibuffer-map
@@ -33,7 +33,6 @@
          ([remap jump-to-register] . counsel-register)
          ("C-c s" . counsel-rg)
          ("C-c /" . counsel-search)
-         ("C-M-i" . counsel-company)
          ([remap recentf-open-files] . counsel-recentf))
   :hook (ivy-mode . counsel-mode))
 
