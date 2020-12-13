@@ -43,18 +43,27 @@
 
 (use-package hippie-exp
   :ensure nil
-  :custom ((hippie-expand-try-functions-list '(try-expand-dabbrev
-                                               try-expand-dabbrev-all-buffers
-                                               try-expand-dabbrev-from-kill
-                                               try-complete-file-name-partially
+  :custom ((hippie-expand-try-functions-list '(try-complete-file-name-partially
                                                try-complete-file-name
-                                               try-expand-all-abbrevs
-                                               try-expand-list
+                                               try-expand-dabbrev
+                                               try-expand-dabbrev-visible
+                                               try-expand-dabbrev-from-kill
+                                               try-expand-whole-kill
+                                               try-expand-dabbrev-all-buffers
                                                try-expand-line
-                                               try-complete-lisp-symbol-partially
-                                               try-complete-lisp-symbol))
+                                               try-expand-line-all-buffers))
            (hippie-expand-verbose nil))
-  :bind ("M-/" . hippie-expand))
+  :bind ("M-/" . hippie-expand)
+  :hook (prog-mode . booaa/hippie-lisp-related-mode-setup))
+
+(defun booaa/hippie-lisp-related-mode-setup ()
+  (when (derived-mode-p 'lisp-data-mode)
+      (setq-local hippie-expand-try-functions-list
+                  (append '(try-complete-lisp-symbol-partially
+                            try-complete-lisp-symbol
+                            try-expand-list
+                            try-expand-list-all-buffers)
+                          hippie-expand-try-functions-list))))
 
 (setq completion-styles '(flex)
       completion-ignore-case t
