@@ -4,6 +4,13 @@
 
 (minibuffer-depth-indicate-mode)
 
+(setq completion-styles '(flex)
+      completion-ignore-case t
+      read-file-name-completion-ignore-case t
+      read-buffer-completion-ignore-case t
+      completion-category-defaults nil
+      completion-category-overrides '((file (styles partial-completion))))
+
 (use-package hippie-exp
   :ensure nil
   :custom ((hippie-expand-try-functions-list '(try-complete-file-name
@@ -25,13 +32,6 @@
                             try-expand-list
                             try-expand-list-all-buffers)
                           hippie-expand-try-functions-list))))
-
-(setq completion-styles '(flex)
-      completion-ignore-case t
-      read-file-name-completion-ignore-case t
-      read-buffer-completion-ignore-case t
-      completion-category-defaults nil
-      completion-category-overrides '((file (styles partial-completion))))
 
 (use-package company
   :custom ((company-idle-delay 0.25)
