@@ -11,6 +11,11 @@
   :custom (display-time-string-forms '((format-time-string "%m/%d %H:%M")))
   :hook (after-init . display-time-mode))
 
+(use-package battery
+  :ensure nil
+  :custom (battery-mode-line-format "%B (%p%%, %t)")
+  :hook (after-init . display-battery-mode))
+
 (defun booaa/init-buffer ()
   (let ((old-dir default-directory)
         (buf (find-file (expand-file-name "t-ara/t-ara-6.jpg" user-emacs-directory))))
@@ -34,7 +39,8 @@
                                    mode-line-buffer-identification "  "
                                    mode-line-position))
   (setq-default frame-title-format '((:eval (alist-get 'name (tab-bar--current-tab))) "  "
-                                     display-time-string))
+                                     display-time-string "  "
+                                     battery-mode-line-string))
   
   (load-theme 'zenburn t))
 
