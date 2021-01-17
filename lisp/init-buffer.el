@@ -12,6 +12,10 @@
            (auto-revert-verbose nil))
   :hook (after-init . global-auto-revert-mode))
 
+(use-package help
+  :ensure nil
+  :hook (after-init . temp-buffer-resize-mode))
+
 (use-package ibuffer
   :ensure nil
   :custom (ibuffer-show-empty-filter-groups nil)
