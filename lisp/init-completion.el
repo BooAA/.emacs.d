@@ -11,6 +11,8 @@
       completion-category-defaults nil
       completion-category-overrides '((file (styles partial-completion))))
 
+(setq completion-show-help nil)
+
 (use-package hippie-exp
   :ensure nil
   :custom ((hippie-expand-try-functions-list '(try-complete-file-name
