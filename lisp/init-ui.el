@@ -8,7 +8,9 @@
 
 (use-package time
   :ensure nil
-  :custom (display-time-string-forms '((format-time-string "%m/%d %H:%M")))
+  :custom ((display-time-mail-string "")
+           (display-time-default-load-average nil)
+           (display-time-format "%m/%d %a %H:%M"))
   :hook (after-init . display-time-mode))
 
 (use-package battery
