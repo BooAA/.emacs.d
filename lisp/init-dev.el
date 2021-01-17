@@ -27,8 +27,7 @@
          ("M-n" . flymake-goto-next-error)
          ("M-p" . flymake-goto-prev-error)))
 
-(use-package magit
-  :bind ("C-x g" . magit-status))
+(use-package magit)
 
 (global-set-key (kbd "C-c h") #'man)
 (global-set-key (kbd "<f5>") #'compile)
