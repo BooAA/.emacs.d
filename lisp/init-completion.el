@@ -4,11 +4,9 @@
 
 (minibuffer-depth-indicate-mode)
 
-
 (use-package hippie-exp
   :ensure nil
-  :custom ((hippie-expand-try-functions-list '(try-complete-file-name-partially
-                                               try-complete-file-name
+  :custom ((hippie-expand-try-functions-list '(try-complete-file-name
                                                try-expand-dabbrev
                                                try-expand-dabbrev-visible
                                                try-expand-dabbrev-from-kill
@@ -23,8 +21,7 @@
 (defun booaa/hippie-lisp-related-mode-setup ()
   (when (derived-mode-p 'lisp-data-mode)
       (setq-local hippie-expand-try-functions-list
-                  (append '(try-complete-lisp-symbol-partially
-                            try-complete-lisp-symbol
+                  (append '(try-complete-lisp-symbol
                             try-expand-list
                             try-expand-list-all-buffers)
                           hippie-expand-try-functions-list))))
