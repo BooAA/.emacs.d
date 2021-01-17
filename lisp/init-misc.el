@@ -31,27 +31,4 @@
   :mode (("\\.md\\'" . gfm-mode)
          ("\\.markdown\\'" . gfm-mode)))
 
-(use-package exwm
-  :commands (exwm-enable)
-  :custom ((exwm-workspace-number 4)
-           ;; (exwm-input-line-mode-passthrough t)
-           (exwm-input-global-keys
-            `(([?\s-r] . exwm-reset)
-              ([?\s-&] . booaa/exwm-launch-application)
-              ;; 's-N': Switch to certain workspace.
-              ,@(mapcar (lambda (i)
-                          `(,(kbd (format "s-%d" i)) .
-                            (lambda ()
-                              (interactive)
-                              (exwm-workspace-switch-create ,i))))
-                        (number-sequence 0 9)))))
-  :hook (exwm-update-class . booaa/exwm-rename-buffer-class-name))
-
-(defun booaa/exwm-rename-buffer-class-name ()
-  (exwm-workspace-rename-buffer exwm-class-name))
-
-(defun booaa/exwm-launch-application (command)
-  (interactive (list (read-shell-command "$ ")))
-  (start-process-shell-command command nil command))
-
 (provide 'init-misc)
