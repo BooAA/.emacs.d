@@ -30,6 +30,8 @@
         pyvenv
         sly
         magit
+        tree-sitter
+        tree-sitter-langs
         ;; misc
         keycast
         exwm
