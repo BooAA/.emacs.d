@@ -11,7 +11,7 @@
         gc-cons-percentage 0.5
         file-name-handler-alist booaa/file-name-handler-alist))
 
-(add-hook 'emacs-startup-hook 'booaa/reset-after-startup)
+(add-hook 'emacs-startup-hook #'booaa/reset-after-startup)
 
 ;; keep customization information other place and never load it
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
