@@ -33,10 +33,4 @@
 (global-set-key (kbd "C-c h") #'man)
 (global-set-key (kbd "<f5>") #'compile)
 
-(use-package web-mode
-  :custom ((web-mode-markup-indent-offset 2)
-           (web-mode-css-indent-offset 2)
-           (web-mode-code-indent-offset 2))
-  :mode ("\\.html?\\'" . web-mode))
-
 (provide 'init-dev)

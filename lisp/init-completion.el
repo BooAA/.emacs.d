@@ -4,41 +4,6 @@
 
 (minibuffer-depth-indicate-mode)
 
-(use-package ivy
-  :custom ((ivy-wrap t)
-           (ivy-height 15)
-           (ivy-count-format "%d/%d ")
-           (ivy-display-style nil)
-           (ivy-read-action-function 'ivy-read-action-ivy)
-           (ivy-on-del-error-function 'ignore)
-           (ivy-ignore-buffers '("\\` " "\\`\\*")))
-  :bind (:map ivy-mode-map
-         ("C-c z" . ivy-resume)
-         :map ivy-minibuffer-map
-         ("TAB" . ivy-partial)
-         ("C-SPC" . booaa/ivy-toggle-mark))
-  :hook (after-init . ivy-mode))
-
-(defun booaa/ivy-toggle-mark ()
-  "mark or unmark current candidate and move forward"
-  (interactive)
-  (if (ivy--marked-p)
-      (ivy-unmark)
-    (ivy-mark)))
-
-(use-package counsel
-  :custom ((counsel-grep-base-command "rg -M 120 --with-filename --no-heading --line-number --color never %s")
-           (counsel-search-engine 'google))
-  :bind (:map counsel-mode-map
-         ([remap jump-to-register] . counsel-register)
-         ("C-c s" . counsel-rg)
-         ("C-c /" . counsel-search)
-         ([remap recentf-open-files] . counsel-recentf))
-  :hook (ivy-mode . counsel-mode))
-
-(use-package smex)
-
-(use-package wgrep)
 
 (use-package hippie-exp
   :ensure nil

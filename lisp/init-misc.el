@@ -1,12 +1,7 @@
 ;;; -*- lexical-binding: t -*-
 
-(use-package request)
-
 (use-package keycast
   :commands (keycast-mode))
-
-(use-package olivetti
-  :custom (olivetti-body-width 0.7))
 
 (use-package youtube-dl
   :load-path "site-lisp/youtube-dl-emacs"

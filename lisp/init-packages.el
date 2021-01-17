@@ -19,11 +19,8 @@
         ;; buffer management
         ibuffer-vc
         ;; completion
-        counsel
-        ivy
         company
         ;; search and replace
-        swiper
         ;; config and packages management
         use-package
         no-littering
@@ -32,20 +29,13 @@
         pyvenv
         sly
         magit
-        web-mode
-        ;; shell
-        shx
         ;; misc
         keycast
-        request
-        olivetti
         exwm
         markdown-mode
         ;; UI
         zenburn-theme
         ;; soft dependency
-        smex
-        wgrep
         ))
 
 ;; (package-quickstart-refresh)
