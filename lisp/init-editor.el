@@ -27,7 +27,7 @@
 
 (use-package elec-pair
   :ensure nil
-  :custom ((electric-pair-open-newline-between-pairs t))
+  :custom (electric-pair-open-newline-between-pairs t)
   :hook (after-init . electric-pair-mode))
 
 (use-package so-long
