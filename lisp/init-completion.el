@@ -36,8 +36,8 @@
                           hippie-expand-try-functions-list))))
 
 (use-package company
-  :custom ((company-idle-delay 0.25)
-           (company-minimum-prefix-length 3)
+  :custom ((company-idle-delay 0.2)
+           (company-minimum-prefix-length 2)
            (company-tooltip-align-annotations t)
            (company-selection-wrap-around t)
            (company-dabbrev-ignore-case t)
