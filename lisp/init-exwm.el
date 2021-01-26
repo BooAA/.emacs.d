@@ -49,4 +49,10 @@
   :ensure nil
   :hook (after-init . exwm-systemtray-enable))
 
+(defun exwm-ivy-posframe-fix ()
+  (when (featurep 'ivy-posframe)
+      (add-to-list 'ivy-posframe-parameters '(parent-frame . nil))))
+
+(add-hook 'exwm-mode-hook #'exwm-ivy-posframe-fix)
+
 (provide 'init-exwm)
