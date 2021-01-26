@@ -20,8 +20,14 @@
         ibuffer-vc
         ;; completion
         company
+        ivy
+        ivy-rich
+        ivy-posframe
+        counsel
+	      smex
         ;; search and replace
         wgrep
+        swiper
         ;; config and packages management
         use-package
         no-littering
