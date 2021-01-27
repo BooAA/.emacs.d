@@ -51,7 +51,8 @@
            (ivy-posframe-parameters '((left-fringe . 4)
                                       (right-fringe . 4)))
            (ivy-posframe-display-functions-alist
-            '((t . ivy-posframe-display-frame-middle-top-center))))
+            '((swiper . ivy-display-function-fallback)
+              (t . ivy-posframe-display-frame-middle-top-center))))
   :hook (ivy-mode . ivy-posframe-mode))
 
 (defun ivy-posframe-fix-size ()
