@@ -36,6 +36,7 @@
            "rg -M 120 --with-filename --no-heading --line-number --color never %s")
   :bind (:map counsel-mode-map
          ("C-c s" . counsel-rg)
+         ("C-c /" . counsel-google)
          ([remap recentf-open-files] . counsel-recentf))
   :hook (ivy-mode . counsel-mode))
 

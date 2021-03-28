@@ -9,6 +9,8 @@
            (youtube-dl-slow-rate "10M"))
   :commands (youtube-dl youtube-dl-playlist youtube-dl-list))
 
+(use-package request)
+
 (use-package browse-url
   :ensure nil
   :custom ((browse-url-browser-function #'browse-url-chromium)

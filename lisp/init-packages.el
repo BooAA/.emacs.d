@@ -42,6 +42,7 @@
         tree-sitter-langs
         ;; misc
         keycast
+        request
         exwm
         markdown-mode
         ;; UI
