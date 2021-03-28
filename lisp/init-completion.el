@@ -54,7 +54,7 @@
    'counsel-describe-variable-transformer '(:width 0.35)))
 
 (use-package ivy-posframe
-  :custom ((ivy-posframe-size-function #'ivy-posframe-fix-size)
+  :custom ((ivy-posframe-size-function #'ivy-posframe-adaptive-size)
            (ivy-posframe-parameters '((left-fringe . 4)
                                       (right-fringe . 4)))
            (ivy-posframe-display-functions-alist
@@ -62,7 +62,7 @@
               (t . ivy-posframe-display-frame-middle-top-center))))
   :hook (ivy-mode . ivy-posframe-mode))
 
-(defun ivy-posframe-fix-size ()
+(defun ivy-posframe-adaptive-size ()
   (let ((width (round (* .75 (frame-width)))))
     (list :height ivy-height
           :width width
