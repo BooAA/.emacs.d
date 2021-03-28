@@ -44,7 +44,13 @@
 (use-package ivy-rich
   :hook (ivy-mode . ivy-rich-mode)
   :config
-  (setcdr (assq t ivy-format-functions-alist) #'ivy-format-function-line))
+  (setcdr (assq t ivy-format-functions-alist) #'ivy-format-function-line)
+  (ivy-rich-modify-column
+   'counsel-describe-function
+   'counsel-describe-function-transformer '(:width 0.35))
+  (ivy-rich-modify-column
+   'counsel-describe-variable
+   'counsel-describe-variable-transformer '(:width 0.35)))
 
 (use-package ivy-posframe
   :custom ((ivy-posframe-size-function #'ivy-posframe-fix-size)
