@@ -29,6 +29,12 @@
 
 (use-package magit)
 
+(use-package web-mode
+  :custom ((web-mode-markup-indent-offset 2)
+           (web-mode-css-indent-offset 2)
+           (web-mode-code-indent-offset 2))
+  :mode ("\\.html?\\'" . web-mode))
+
 (use-package tree-sitter
   :hook ((after-init . global-tree-sitter-mode)
          (tree-sitter-after-on . tree-sitter-hl-mode))

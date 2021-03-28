@@ -36,6 +36,7 @@
         ;; development tools
         eglot
         pyvenv
+        web-mode
         sly
         magit
         tree-sitter
