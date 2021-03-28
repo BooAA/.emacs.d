@@ -26,7 +26,7 @@
         ivy-rich
         ivy-posframe
         counsel
-	      smex
+	smex
         ;; search and replace
         wgrep
         swiper
