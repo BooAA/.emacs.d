@@ -1,7 +1,6 @@
 ;;; -*- lexical-binding: t -*-
 
-(setq-default indent-tabs-mode nil
-              tab-width 2)
+(setq-default indent-tabs-mode nil)
 
 (setq make-backup-files nil
       auto-save-default nil)
