@@ -5,13 +5,6 @@
 (setq make-backup-files nil
       auto-save-default nil)
 
-;; Set default font
-(set-face-attribute 'default nil
-                    :family "hack"
-                    :height 120
-                    :weight 'normal
-                    :width 'normal)
-
 (setq require-final-newline t)
 
 (use-package recentf
