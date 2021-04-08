@@ -1,21 +1,18 @@
 ;;; -*- lexical-binding: t -*-
 
-(defvar rmail-accounts
-  `(("RMAIL-Gmail" . ,(concat "maildir://" (expand-file-name "~/Mail/Gmail/inbox")))
-    ("RMAIL-NTU" . ,(concat "maildir://" (expand-file-name "~/Mail/NTU/inbox")))))
+(setq user-full-name "Liang-Jie Lee"
+      user-mail-address "s930054123yaoyao@gmail.com")
 
-(defun rmail-select-account ()
-  (interactive)
-  (let* ((file (completing-read "select account:"
-                                (mapcar #'car rmail-accounts)))
-         (inbox (alist-get file rmail-accounts nil nil #'equal)))
-    (rmail (expand-file-name file no-littering-var-directory))
-    (set-rmail-inbox-list inbox)))
+(setq send-mail-function 'smtpmail-send-it
+      smtpmail-smtp-server "smtp.gmail.com"
+      smtpmail-smtp-service 587)
 
-(use-package rmail
-  :ensure nil
-  :custom ((rmail-primary-inbox-list `(,(cdar rmail-accounts)))
-           (rmail-file-name (expand-file-name (caar rmail-accounts)
-                                              no-littering-var-directory))))
+(use-package mu4e
+  :load-path "/usr/local/share/emacs/site-lisp/mu4e"
+  :custom ((mu4e-get-mail-command "mbsync gmail-inbox")
+           (mu4e-update-interval 180)
+           (mu4e-sent-messages-behavior 'delete)
+           (mu4e-completing-read-function 'completing-read))
+  :commands (mu4e))
 
 (provide 'init-mail)
