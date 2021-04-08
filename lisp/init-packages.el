@@ -33,6 +33,9 @@
         ;; config and packages management
         use-package
         no-littering
+        ;; editing
+        move-text
+        expand-region
         ;; development tools
         eglot
         pyvenv

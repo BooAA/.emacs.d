@@ -30,9 +30,20 @@
   :ensure nil
   :hook (after-init . savehist-mode))
 
+(use-package saveplace
+  :ensure nil
+  :hook (after-init . save-place-mode))
+
+(use-package move-text
+  :hook (after-init . move-text-default-bindings))
+
+(use-package expand-region
+  :bind ("C-." . er/expand-region))
+
+(global-set-key (kbd "C-M-<backspace>") #'backward-kill-sexp)
 (global-set-key (kbd "M-z") #'zap-up-to-char)
 (global-set-key (kbd "M-Z") #'zap-to-char)
-(global-set-key (kbd "C-%") #'replace-string)
+(global-set-key (kbd "C-%") #'replace-regexp)
 (global-set-key (kbd "C-x r I") #'string-insert-rectangle)
 
 (provide 'init-editor)
