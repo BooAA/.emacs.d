@@ -21,15 +21,15 @@
         ;; buffer management
         ibuffer-vc
         ;; completion
+        selectrum
+        selectrum-prescient
+        consult
+        marginalia
+        embark
+        embark-consult
         company
-        ivy
-        ivy-rich
-        ivy-posframe
-        counsel
-	smex
         ;; search and replace
         wgrep
-        swiper
         ;; config and packages management
         use-package
         no-littering
@@ -46,12 +46,12 @@
         tree-sitter-langs
         ;; misc
         keycast
-        request
         exwm
         markdown-mode
+        tablist
         ;; UI
         zenburn-theme
-        ;; soft dependency
+        mini-frame
         ))
 
 ;; (package-quickstart-refresh)

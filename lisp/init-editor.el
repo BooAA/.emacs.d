@@ -40,6 +40,15 @@
 (use-package expand-region
   :bind ("C-." . er/expand-region))
 
+(use-package consult
+  :bind (("M-g o" . consult-outline)
+         ("M-g m" . consult-mark)
+         ("M-g k" . consult-global-mark)
+         ([remap goto-line] . consult-goto-line)
+         ("M-#" . consult-register-load)
+         ("M-'" . consult-register-store)
+         ("C-M-#" . consult-register)))
+
 (global-set-key (kbd "C-M-<backspace>") #'backward-kill-sexp)
 (global-set-key (kbd "M-z") #'zap-up-to-char)
 (global-set-key (kbd "M-Z") #'zap-to-char)
