@@ -13,14 +13,9 @@
 
 (use-package browse-url
   :ensure nil
-  :custom ((browse-url-browser-function #'browse-url-chromium)
+  :custom ((browse-url-browser-function #'browse-url-chrome)
            (browse-url-handlers
-            '(("\\`file://.*\\(\\.md\\)\\|\\(\\.markdown\\)" . browse-url--browser))))
-  :bind (("C-c & ." . browse-url-at-point)
-         ("C-c & b" . browse-url-of-buffer)
-         ("C-c & r" . browse-url-of-region)
-         ("C-c & u" . browse-url)
-         ("C-c & v" . browse-url-of-file)))
+            '(("\\`file://.*\\(\\.md\\)\\|\\(\\.markdown\\)" . browse-url--browser)))))
 
 (use-package markdown-mode
   :custom ((markdown-enable-math t)
