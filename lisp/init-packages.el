@@ -56,7 +56,6 @@
         mini-frame
         ))
 
-;; (package-quickstart-refresh)
-;; (setq package-quickstart t)
+(setq package-native-compile t)
 
 (provide 'init-packages)
