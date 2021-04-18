@@ -35,6 +35,11 @@
            (web-mode-code-indent-offset 2))
   :mode ("\\.html?\\'" . web-mode))
 
+(use-package simple-httpd
+  :custom (httpd-root "/var/www"))
+
+(use-package skewer-mode)
+
 (use-package tree-sitter
   :hook ((after-init . global-tree-sitter-mode)
          (tree-sitter-after-on . tree-sitter-hl-mode))

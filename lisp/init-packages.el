@@ -40,6 +40,8 @@
         eglot
         pyvenv
         web-mode
+        simple-httpd
+        skewer-mode
         sly
         magit
         tree-sitter
