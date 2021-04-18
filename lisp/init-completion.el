@@ -38,6 +38,7 @@
 (use-package embark
   :custom (embark-prompter 'embark-completing-read-prompter)
   :bind ("C-;" . embark-act)
+  :hook (embark-collect-mode . embark-collect-direct-action-minor-mode)
   :config (require 'embark-consult))
 
 (add-hook 'embark-pre-action-hook (lambda () (mini-frame-mode -1)))

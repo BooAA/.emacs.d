@@ -21,6 +21,7 @@
   :mode (("\\.md\\'" . gfm-mode)
          ("\\.markdown\\'" . gfm-mode)))
 
-(use-package tablist)
+(use-package tablist
+  :hook (embark-collect-mode . tablist-minor-mode))
 
 (provide 'init-misc)
