@@ -21,8 +21,8 @@
         ;; buffer management
         ibuffer-vc
         ;; completion
+        orderless
         selectrum
-        selectrum-prescient
         consult
         marginalia
         embark

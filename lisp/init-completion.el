@@ -4,7 +4,7 @@
 
 (minibuffer-depth-indicate-mode)
 
-(setq completion-styles '(basic substring flex)
+(setq completion-styles '(basic substring flex orderless)
       completion-ignore-case t
       read-file-name-completion-ignore-case t
       read-buffer-completion-ignore-case t
@@ -13,13 +13,15 @@
 
 (setq completion-show-help nil)
 
-(use-package selectrum
-  :custom (selectrum-max-window-height '15)
-  :hook (after-init . selectrum-mode))
+(use-package orderless
+  :custom (orderless-skip-highlighting t))
 
-(use-package selectrum-prescient
-  :hook ((selectrum-mode . selectrum-prescient-mode)
-         (selectrum-prescient-mode . prescient-persist-mode)))
+(use-package selectrum
+  :custom ((selectrum-max-window-height 15)
+           (selectrum-highlight-candidates-function
+            #'orderless-highlight-matches))
+  :hook (after-init . selectrum-mode)
+  :config (require 'orderless))
 
 (use-package marginalia
   :hook (after-init . marginalia-mode))
