@@ -17,7 +17,7 @@
   :custom (orderless-skip-highlighting t))
 
 (use-package selectrum
-  :custom ((selectrum-max-window-height 15)
+  :custom ((selectrum-max-window-height 20)
            (selectrum-highlight-candidates-function
             #'orderless-highlight-matches))
   :hook (after-init . selectrum-mode)
@@ -27,6 +27,7 @@
   :hook (after-init . marginalia-mode))
 
 (use-package consult
+  :custom (consult-preview-key nil)
   :bind (("C-c h" . consult-history)
          ("C-c m" . consult-mode-command)
          ("C-c b" . consult-bookmark)
