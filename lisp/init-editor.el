@@ -37,9 +37,6 @@
 (use-package move-text
   :hook (after-init . move-text-default-bindings))
 
-(use-package expand-region
-  :bind ("C-." . er/expand-region))
-
 (use-package consult
   :bind (("M-g o" . consult-outline)
          ("M-g m" . consult-mark)

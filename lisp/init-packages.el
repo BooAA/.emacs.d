@@ -35,17 +35,13 @@
         no-littering
         ;; editing
         move-text
-        expand-region
         ;; development tools
         eglot
         pyvenv
         web-mode
         simple-httpd
-        skewer-mode
         sly
         magit
-        tree-sitter
-        tree-sitter-langs
         ;; misc
         keycast
         exwm

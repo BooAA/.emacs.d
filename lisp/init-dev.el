@@ -38,16 +38,4 @@
 (use-package simple-httpd
   :custom (httpd-root "/var/www"))
 
-(use-package skewer-mode)
-
-(use-package tree-sitter
-  :hook ((after-init . global-tree-sitter-mode)
-         (tree-sitter-after-on . tree-sitter-hl-mode))
-  :config (require 'tree-sitter-langs))
-
-(use-package tree-sitter-langs)
-
-(global-set-key (kbd "C-c h") #'man)
-(global-set-key (kbd "<f5>") #'compile)
-
 (provide 'init-dev)
