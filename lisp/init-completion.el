@@ -72,7 +72,7 @@
                           hippie-expand-try-functions-list))))
 
 (use-package company
-  :custom ((company-idle-delay 0.7)
+  :custom ((company-idle-delay 0.3)
            (company-minimum-prefix-length 3)
            (company-tooltip-align-annotations t)
            (company-selection-wrap-around t)
@@ -84,6 +84,16 @@
                                company-files
                                (company-dabbrev-code company-keywords)
                                company-dabbrev)))
+  :bind (:map company-active-map
+	 ("C-n" . nil)
+	 ("C-p" . nil)
+	 ("M-n" . company-select-next)
+	 ("M-p" . company-select-previous)
+	 :map company-search-map
+	 ("C-n" . nil)
+	 ("C-p" . nil)
+	 ("M-n" . company-select-next)
+	 ("M-p" . company-select-previous))
   :hook ((after-init . global-company-mode)
          (company-mode . company-tng-mode)))
 
