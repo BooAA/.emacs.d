@@ -5,6 +5,9 @@
 (setq gdb-many-windows t
       gdb-restore-window-configuration-after-quit t)
 
+(setq eldoc-echo-area-display-truncation-message nil
+      eldoc-echo-area-use-multiline-p 1)
+
 (use-package eglot
   :commands eglot
   :custom ((eglot-autoshutdown t)
