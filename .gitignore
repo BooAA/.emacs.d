@@ -2,3 +2,5 @@ custom.el
 elpa/
 etc/
 var/
+eln-cache/
+transient/
