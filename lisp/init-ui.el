@@ -46,6 +46,7 @@
   :custom ((mini-frame-handle-completions nil)
            (mini-frame-lazy nil)
            (mini-frame-color-shift-step 6)
+           ;; (mini-frame-standalone t)
            (mini-frame-show-parameters '((top    . 0.15)
                                          (width  . 0.8)
                                          (left   . 0.5)
