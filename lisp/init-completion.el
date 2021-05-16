@@ -27,7 +27,8 @@
   :hook (after-init . marginalia-mode))
 
 (use-package consult
-  :custom (consult-preview-key nil)
+  :custom ((consult-preview-key nil)
+           (consult-config '((consult-line :preview-key any))))
   :bind (("C-c h" . consult-history)
          ("C-c m" . consult-mode-command)
          ("C-c b" . consult-bookmark)
