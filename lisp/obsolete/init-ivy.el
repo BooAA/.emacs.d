@@ -73,4 +73,10 @@
 
 (define-key isearch-mode-map (kbd "M-s s") 'swiper-isearch-toggle)
 
+(defun exwm-ivy-posframe-fix ()
+  (when (featurep 'ivy-posframe)
+      (add-to-list 'ivy-posframe-parameters '(parent-frame . nil))))
+
+(add-hook 'exwm-mode-hook #'exwm-ivy-posframe-fix)
+
 (provide 'init-obsolete)
