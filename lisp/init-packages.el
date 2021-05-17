@@ -37,15 +37,12 @@
         move-text
         ;; development tools
         eglot
-        pyvenv
-        web-mode
         simple-httpd
         sly
         magit
         ;; misc
         keycast
         exwm
-        markdown-mode
         tablist
         ;; UI
         zenburn-theme

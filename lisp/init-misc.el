@@ -9,18 +9,6 @@
            (youtube-dl-slow-rate "10M"))
   :commands (youtube-dl youtube-dl-playlist youtube-dl-list))
 
-(use-package browse-url
-  :ensure nil
-  :custom ((browse-url-browser-function #'browse-url-chrome)
-           (browse-url-handlers
-            '(("\\`file://.*\\(\\.md\\)\\|\\(\\.markdown\\)" . browse-url--browser)))))
-
-(use-package markdown-mode
-  :custom ((markdown-enable-math t)
-           (markdown-fontify-code-blocks-natively t))
-  :mode (("\\.md\\'" . gfm-mode)
-         ("\\.markdown\\'" . gfm-mode)))
-
 (use-package tablist
   :hook (embark-collect-mode . tablist-minor-mode))
 

@@ -16,9 +16,6 @@
            (eglot-events-buffer-size 0))
   :config (setf (cdr (assoc '(c++-mode c-mode) eglot-server-programs)) '("clangd")))
 
-(use-package pyvenv
-  :commands (pyvenv-activate pyvenv-workon))
-
 (use-package sly
   :custom (inferior-lisp-program "sbcl")
   :commands sly)
@@ -31,12 +28,6 @@
          ("M-p" . flymake-goto-prev-error)))
 
 (use-package magit)
-
-(use-package web-mode
-  :custom ((web-mode-markup-indent-offset 2)
-           (web-mode-css-indent-offset 2)
-           (web-mode-code-indent-offset 2))
-  :mode ("\\.html?\\'" . web-mode))
 
 (use-package simple-httpd
   :custom (httpd-root "/var/www"))
