@@ -45,8 +45,28 @@
   :hook (embark-collect-mode . embark-collect-direct-action-minor-mode)
   :config (require 'embark-consult))
 
-(add-hook 'embark-pre-action-hook (lambda () (mini-frame-mode -1)))
-(add-hook 'embark-post-action-hook (lambda () (mini-frame-mode 1)))
+(defun embark-mini-frame-disable ()
+  (mini-frame-mode -1))
+
+(defun embark-mini-frame-reset ()
+  (remove-hook 'embark-pre-action-hook #'embark-mini-frame-disable)
+  (mini-frame-mode 1))
+
+(defun embark-mini-frame-detect (action target &optional quit)
+  (unless (memq action '(embark-become
+                         embark-collect-live
+                         embark-collect-snapshot
+                         embark-collect-snapshot
+                         embark-export))
+    (let ((allow-edit (if embark-allow-edit-default
+                        (not (memq action embark-skip-edit-commands))
+                        (memq action embark-allow-edit-commands))))
+      (when (and (not allow-edit) (or (and (minibufferp) quit)
+                                      (not (minibufferp))))
+        (add-hook 'embark-pre-action-hook #'embark-mini-frame-disable)))))
+
+(advice-add #'embark--act :before #'embark-mini-frame-detect)
+(add-hook 'embark-setup-hook #'embark-mini-frame-reset)
 
 (use-package embark-consult)
 
