@@ -115,7 +115,7 @@
 	 ("C-n" . nil)
 	 ("C-p" . nil)
 	 ("M-n" . company-select-next)
-	 ("M-p" . company-select-previous))
+         ("M-p" . company-select-previous))
   :hook ((after-init . global-company-mode)
          (company-mode . company-tng-mode)))
 
