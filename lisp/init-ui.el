@@ -4,6 +4,8 @@
 
 (setq use-short-answers t)
 
+(setq file-name-shadow-properties '(invisible t))
+
 (setq confirm-kill-emacs nil
       confirm-kill-processes nil)
 
