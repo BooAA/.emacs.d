@@ -24,6 +24,7 @@
   :config (require 'orderless))
 
 (use-package marginalia
+  :custom (marginalia-margin-min 2)
   :hook (after-init . marginalia-mode))
 
 (use-package consult
