@@ -46,15 +46,13 @@
 (use-package mini-frame
   :defer nil
   :custom ((mini-frame-handle-completions nil)
-           (mini-frame-lazy nil)
+           (mini-frame-create-lazy nil)
            (mini-frame-color-shift-step 6)
            ;; (mini-frame-standalone t)
            (mini-frame-show-parameters '((top    . 0.15)
                                          (width  . 0.8)
                                          (left   . 0.5)
-                                         (left-fringe . 4)
-                                         (right-fringe . 4)
-                                         (height . 20)))
+                                         (height . 21)))
            (mini-frame-advice-functions `(completing-read
                                           ,completing-read-function
                                           completing-read-multiple
