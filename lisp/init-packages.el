@@ -49,6 +49,7 @@
         mini-frame
         ))
 
-(setq package-native-compile t)
+(setq package-native-compile t
+      native-comp-async-report-warnings-errors 'silent)
 
 (provide 'init-packages)
