@@ -7,6 +7,11 @@
 
 (setq require-final-newline t)
 
+(setq history-length t
+      history-delete-duplicates t)
+
+(setq disabled-command-function nil)
+
 (use-package recentf
   :ensure nil
   :custom (recentf-max-saved-items nil)
