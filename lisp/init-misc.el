@@ -9,7 +9,4 @@
            (youtube-dl-slow-rate "10M"))
   :commands (youtube-dl youtube-dl-playlist youtube-dl-list))
 
-(use-package tablist
-  :hook (embark-collect-mode . tablist-minor-mode))
-
 (provide 'init-misc)

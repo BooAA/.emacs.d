@@ -9,19 +9,19 @@
 (setq confirm-kill-emacs nil
       confirm-kill-processes nil)
 
-(setq ring-bell-function 'ignore)
-
 (blink-cursor-mode -1)
 (fringe-mode 2)
 (column-number-mode)
 
 (setq-default mode-line-format '((vc-mode vc-mode) "  "
                                  mode-line-buffer-identification "  "
-                                 mode-line-position))
+                                 mode-line-position
+                                 (:eval (mlscroll-mode-line))))
 
 (setq-default frame-title-format '(" "
                                    display-time-string "  "
-                                   battery-mode-line-string))
+                                   ;; battery-mode-line-string
+                                   ))
 
 (use-package zenburn-theme
   :demand t
@@ -43,28 +43,8 @@
   :custom (battery-mode-line-format "%B (%p%%, %t)")
   :hook (after-init . display-battery-mode))
 
-(use-package mini-frame
-  :defer nil
-  :custom ((mini-frame-handle-completions nil)
-           (mini-frame-create-lazy nil)
-           (mini-frame-color-shift-step 6)
-           ;; (mini-frame-standalone t)
-           (mini-frame-show-parameters '((top    . 0.15)
-                                         (width  . 0.8)
-                                         (left   . 0.5)
-                                         (height . 21)))
-           (mini-frame-advice-functions `(completing-read
-                                          ,completing-read-function
-                                          completing-read-multiple
-                                          read-buffer
-                                          ,read-buffer-function
-                                          read-file-name
-                                          ,read-file-name-function
-                                          read-directory-name
-                                          read-library-name
-                                          read-variable
-                                          read-command
-                                          read-color)))
-  :hook (after-init . mini-frame-mode))
+(use-package mlscroll
+  :custom (mlscroll-right-align nil)
+  :hook (after-init . mlscroll-mode))
 
 (provide 'init-ui)

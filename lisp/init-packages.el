@@ -21,13 +21,8 @@
         ;; buffer management
         ibuffer-vc
         ;; completion
-        orderless
-        selectrum
-        consult
-        marginalia
-        embark
-        embark-consult
         company
+        helm
         ;; search and replace
         wgrep
         ;; config and packages management
@@ -43,10 +38,9 @@
         ;; misc
         keycast
         exwm
-        tablist
         ;; UI
         zenburn-theme
-        mini-frame
+        mlscroll
         ))
 
 (setq package-native-compile t
