@@ -13,8 +13,7 @@
   :custom ((eglot-autoshutdown t)
            (eglot-autoreconnect 1)
            (eglot-connect-timeout 5)
-           (eglot-events-buffer-size 0))
-  :config (setf (cdr (assoc '(c++-mode c-mode) eglot-server-programs)) '("clangd")))
+           (eglot-events-buffer-size 0)))
 
 (use-package sly
   :custom (inferior-lisp-program "sbcl")
