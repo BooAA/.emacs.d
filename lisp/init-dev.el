@@ -10,7 +10,6 @@
 
 (use-package eglot
   :custom ((eglot-autoshutdown t)
-           (eglot-autoreconnect 1)
            (eglot-connect-timeout 5)
            (eglot-events-buffer-size 0))
   :commands eglot)
