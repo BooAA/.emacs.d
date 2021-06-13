@@ -9,11 +9,11 @@
       eldoc-echo-area-use-multiline-p 1)
 
 (use-package eglot
-  :commands eglot
   :custom ((eglot-autoshutdown t)
            (eglot-autoreconnect 1)
            (eglot-connect-timeout 5)
-           (eglot-events-buffer-size 0)))
+           (eglot-events-buffer-size 0))
+  :commands eglot)
 
 (use-package sly
   :custom (inferior-lisp-program "sbcl")
