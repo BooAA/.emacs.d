@@ -4,9 +4,7 @@
 
 (use-package windmove
   :ensure nil
-  :custom ((windmove-wrap-around t)
-           (windmove-create-window t)
-           (windmove-display-no-select t))
+  :custom (windmove-wrap-around t)
   :bind ("M-S-<return>" . windmove-display-same-window)
   :hook ((after-init . windmove-default-keybindings)
          (after-init . windmove-swap-states-default-keybindings)
