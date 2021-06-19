@@ -44,7 +44,8 @@
   :hook (after-init . display-battery-mode))
 
 (use-package mlscroll
-  :custom (mlscroll-right-align nil)
+  :custom ((mlscroll-right-align nil)
+           (mlscroll-width-chars 20))
   :hook (after-init . mlscroll-mode))
 
 (provide 'init-ui)
