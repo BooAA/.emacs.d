@@ -16,6 +16,10 @@
   :ensure nil
   :hook (after-init . temp-buffer-resize-mode))
 
+(use-package midnight
+  :ensure nil
+  :hook (after-init . midnight-mode))
+
 (use-package ibuffer
   :ensure nil
   :custom (ibuffer-show-empty-filter-groups nil)
