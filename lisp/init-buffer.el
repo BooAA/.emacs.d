@@ -1,10 +1,10 @@
 ;;; -*- lexical-binding: t -*-
 
 (use-package uniquify
+  :ensure nil
   :custom ((uniquify-buffer-name-style 'forward)
            (uniquify-separator "/")
-           (uniquify-after-kill-buffer-p t))
-  :ensure nil)
+           (uniquify-after-kill-buffer-p t)))
 
 (use-package autorevert
   :ensure nil
