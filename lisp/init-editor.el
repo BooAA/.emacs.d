@@ -46,5 +46,6 @@
 (global-set-key (kbd "M-z") #'zap-up-to-char)
 (global-set-key (kbd "M-Z") #'zap-to-char)
 (global-set-key (kbd "C-%") #'replace-regexp)
+(global-set-key (kbd "M-R") #'raise-sexp)
 
 (provide 'init-editor)
