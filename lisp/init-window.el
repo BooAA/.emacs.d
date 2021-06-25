@@ -4,12 +4,12 @@
 
 (use-package windmove
   :ensure nil
-  :custom (windmove-wrap-around t)
-  :bind ("M-S-<return>" . windmove-display-same-window)
-  :hook ((after-init . windmove-default-keybindings)
-         (after-init . windmove-swap-states-default-keybindings)
-         (after-init . windmove-delete-default-keybindings)
-         (after-init . windmove-display-default-keybindings)))
+  :custom ((windmove-wrap-around t)
+           (windmove-default-keybindings '([ignore] shift))
+           (windmove-swap-states-default-keybindings '([ignore] super shift))
+           (windmove-delete-default-keybindings '("\C-x" shift))
+           (windmove-display-default-keybindings '([ignore] control super)))
+  :hook (after-init . windmove-mode))
 
 (use-package winner
   :ensure nil
@@ -17,9 +17,11 @@
 
 (use-package tab-bar
   :ensure nil
-  :custom ((tab-bar-show nil)
+  :custom ((tab-bar-show t)
+           (tab-bar-new-button nil)
+           (tab-bar-close-button nil)
            (tab-bar-new-tab-choice "*scratch*")
-           (tab-bar-select-tab-modifiers '(control super)))
+           (tab-bar-select-tab-modifiers '(hyper)))
   :hook ((after-init . tab-bar-mode)))
 
 (provide 'init-window)
