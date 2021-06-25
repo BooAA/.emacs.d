@@ -21,6 +21,23 @@
            (eglot-events-buffer-size 0))
   :commands eglot)
 
+(defun eglot-imenu-get-point (one-obj-array)
+  (car (eglot--range-region
+        (eglot--dcase (aref one-obj-array 0)
+          (((SymbolInformation) location)
+           (plist-get location :range))
+          (((DocumentSymbol) selectionRange)
+           selectionRange)))))
+
+(defun eglot-imenu-to-simple-form (menu)
+  (cl-loop for form in menu
+           collect (cons (car form)
+                         (if (imenu--subalist-p form)
+                             (eglot-imenu-to-simple-form (cdr form))
+                           (eglot-imenu-get-point (cadr form))))))
+
+(advice-add #'eglot-imenu :filter-return #'eglot-imenu-to-simple-form)
+
 (use-package sly
   :custom (inferior-lisp-program "sbcl")
   :commands sly)
