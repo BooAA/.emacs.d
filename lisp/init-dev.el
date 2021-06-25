@@ -8,6 +8,13 @@
 (setq eldoc-echo-area-display-truncation-message nil
       eldoc-echo-area-use-multiline-p 1)
 
+(use-package flymake
+  :ensure nil
+  :custom (flymake-wrap-around t)
+  :bind (:map flymake-mode-map
+         ("M-n" . flymake-goto-next-error)
+         ("M-p" . flymake-goto-prev-error)))
+
 (use-package eglot
   :custom ((eglot-autoshutdown t)
            (eglot-connect-timeout 5)
@@ -17,13 +24,6 @@
 (use-package sly
   :custom (inferior-lisp-program "sbcl")
   :commands sly)
-
-(use-package flymake
-  :ensure nil
-  :custom (flymake-wrap-around t)
-  :bind (:map flymake-mode-map
-         ("M-n" . flymake-goto-next-error)
-         ("M-p" . flymake-goto-prev-error)))
 
 (use-package magit)
 
