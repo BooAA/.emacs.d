@@ -10,7 +10,6 @@
       confirm-kill-processes nil)
 
 (blink-cursor-mode -1)
-(fringe-mode 2)
 (column-number-mode)
 
 (setq-default mode-line-format '((vc-mode vc-mode) "  "
