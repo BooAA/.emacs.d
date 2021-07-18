@@ -18,7 +18,8 @@
 (use-package eglot
   :custom ((eglot-autoshutdown t)
            (eglot-connect-timeout 5)
-           (eglot-events-buffer-size 0))
+           (eglot-events-buffer-size 0)
+           (eglot-extend-to-xref t))
   :commands eglot)
 
 (defun eglot-imenu-get-point (one-obj-array)
