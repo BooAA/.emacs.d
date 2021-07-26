@@ -22,10 +22,6 @@
                                    ;; battery-mode-line-string
                                    ))
 
-(use-package zenburn-theme
-  :demand t
-  :config (load-theme 'zenburn t))
-
 (use-package paren
   :ensure nil
   :hook (after-init . show-paren-mode))
@@ -41,6 +37,10 @@
   :ensure nil
   :custom (battery-mode-line-format "%B (%p%%, %t)")
   :hook (after-init . display-battery-mode))
+
+(use-package zenburn-theme
+  :demand t
+  :config (load-theme 'zenburn t))
 
 (use-package mlscroll
   :custom ((mlscroll-right-align nil)
