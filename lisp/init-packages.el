@@ -30,7 +30,6 @@
         no-littering
         ;; editing
         move-text
-        expand-region
         ;; development tools
         eglot
         simple-httpd
