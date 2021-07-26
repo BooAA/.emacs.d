@@ -14,7 +14,7 @@
 
 (setq-default mode-line-format '((vc-mode vc-mode) "  "
                                  mode-line-buffer-identification "  "
-                                 mode-line-position
+                                 mode-line-position "  "
                                  (:eval (mlscroll-mode-line))))
 
 (setq-default frame-title-format '(" "
