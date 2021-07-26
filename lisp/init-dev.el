@@ -19,7 +19,15 @@
   :custom ((eglot-autoshutdown t)
            (eglot-connect-timeout 5)
            (eglot-events-buffer-size 0)
-           (eglot-extend-to-xref t))
+           (eglot-extend-to-xref t)
+           (eglot-server-programs '(((c-mode c++-mode)
+                                     "clangd"
+                                     "-j4"
+                                     "--completion-style=detailed"
+                                     "--cross-file-rename"
+                                     "--header-insertion=never"
+                                     "--suggest-missing-includes"
+                                     "--log=error"))))
   :commands eglot)
 
 (defun eglot-imenu-get-point (one-obj-array)
