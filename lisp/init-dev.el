@@ -8,6 +8,14 @@
 (setq eldoc-echo-area-display-truncation-message nil
       eldoc-echo-area-use-multiline-p 1)
 
+(use-package cc-mode
+  :ensure nil
+  :custom (c-default-style '((c-mode . "linux")
+                             (c++-mode . "stroustrup")
+                             (java-mode . "java")
+                             (awk-mode . "awk")
+                             (other . "gnu"))))
+
 (use-package flymake
   :ensure nil
   :custom (flymake-wrap-around t)
