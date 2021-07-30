@@ -8,6 +8,8 @@
 (setq eldoc-echo-area-display-truncation-message nil
       eldoc-echo-area-use-multiline-p 1)
 
+(setq speedbar-tag-regroup-maximum-length 100)
+
 (use-package cc-mode
   :ensure nil
   :custom (c-default-style '((c-mode . "linux")
