@@ -8,7 +8,7 @@
            (windmove-default-keybindings '([ignore] shift))
            (windmove-swap-states-default-keybindings '([ignore] super shift))
            (windmove-delete-default-keybindings '("\C-x" shift))
-           (windmove-display-default-keybindings '([ignore] control super)))
+           (windmove-display-default-keybindings '([ignore] meta shift)))
   :hook (after-init . windmove-mode))
 
 (use-package winner
