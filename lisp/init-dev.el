@@ -1,7 +1,5 @@
 ;;; -*- lexical-binding: t -*-
 
-(setq python-shell-interpreter "python3")
-
 (setq gdb-many-windows t
       gdb-restore-window-configuration-after-quit t)
 
