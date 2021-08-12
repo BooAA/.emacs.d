@@ -37,6 +37,7 @@
         magit
         ;; misc
         keycast
+        elfeed
         exwm
         ;; UI
         zenburn-theme

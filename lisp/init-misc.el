@@ -9,4 +9,11 @@
            (youtube-dl-slow-rate "10M"))
   :commands (youtube-dl youtube-dl-playlist youtube-dl-list))
 
+(use-package elfeed
+  :custom ((elfeed-feeds '("https://www.reddit.com/r/emacs.rss"
+                           "https://www.reddit.com/r/lisp.rss"
+                           "https://lwn.net/headlines/rss"
+                           "https://www.youtube.com/feeds/videos.xml?channel_id=UC9N8C0XFvTCtBGUV2ik6Q3w"))
+           (elfeed-search-filter "@3days-ago +unread")))
+
 (provide 'init-misc)
