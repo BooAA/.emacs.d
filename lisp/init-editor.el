@@ -40,6 +40,7 @@
   :hook (after-init . save-place-mode))
 
 (use-package flyspell
+  :ensure nil
   :hook ((text-mode . flyspell-mode)
          (prog-mode . flyspell-prog-mode)))
 
