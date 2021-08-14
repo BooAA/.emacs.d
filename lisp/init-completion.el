@@ -65,6 +65,7 @@
   :custom (helm-minibuffer-history-key nil)
   :bind (:map helm-map
          ("C-t" . nil)
+         ("C-s" . nil)
          ("C-|" . helm-toggle-resplit-window)))
 
 (defalias 'ev  'emacs-version)
