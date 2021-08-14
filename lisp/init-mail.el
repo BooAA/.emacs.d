@@ -10,8 +10,11 @@
 (use-package mu4e
   :load-path "/usr/local/share/emacs/site-lisp/mu4e"
   :custom ((mu4e-get-mail-command "mbsync gmail-inbox")
-           (mu4e-update-interval 180)
-           (mu4e-sent-messages-behavior 'delete)
+           (mu4e-update-interval 100)
+           (mu4e-split-view 'vertical)
+           (mu4e-headers-visible-columns (/ (frame-width) 2))
+           (mu4e-use-fancy-chars t)
+           (mu4e-confirm-quit nil)
            (mu4e-completing-read-function 'completing-read))
   :commands (mu4e))
 
