@@ -39,11 +39,6 @@
   :ensure nil
   :hook (after-init . save-place-mode))
 
-(use-package flyspell
-  :ensure nil
-  :hook ((text-mode . flyspell-mode)
-         (prog-mode . flyspell-prog-mode)))
-
 (use-package move-text
   :hook (after-init . move-text-default-bindings))
 
