@@ -38,7 +38,6 @@
         ;; misc
         keycast
         elfeed
-        exwm
         ;; UI
         zenburn-theme
         mlscroll
