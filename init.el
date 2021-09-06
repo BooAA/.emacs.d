@@ -1,5 +1,7 @@
 ;;; -*- lexical-binding: t -*-
 
+(defvar booaa/gc-cons-threshold gc-cons-threshold)
+(defvar booaa/gc-cons-percentage gc-cons-percentage)
 (setq gc-cons-threshold  400000000
       gc-cons-percentage 0.6)
 
@@ -7,8 +9,8 @@
 (setq file-name-handler-alist nil)
 
 (defun booaa/reset-after-startup ()
-  (setq gc-cons-threshold 200000000
-        gc-cons-percentage 0.5
+  (setq gc-cons-threshold booaa/gc-cons-threshold
+        gc-cons-percentage booaa/gc-cons-percentage
         file-name-handler-alist booaa/file-name-handler-alist))
 
 (add-hook 'emacs-startup-hook #'booaa/reset-after-startup)
