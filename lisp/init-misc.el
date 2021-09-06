@@ -16,4 +16,9 @@
                            "https://www.youtube.com/feeds/videos.xml?channel_id=UC9N8C0XFvTCtBGUV2ik6Q3w"))
            (elfeed-search-filter "@3days-ago +unread")))
 
+(use-package gcmh
+  :custom ((gcmh-high-cons-threshold (* 64 1024 1024))
+           (gcmh-idle-delay 8))
+  :hook (after-init . gcmh-mode))
+
 (provide 'init-misc)

@@ -38,6 +38,7 @@
         ;; misc
         keycast
         elfeed
+        gcmh
         ;; UI
         zenburn-theme
         mlscroll
