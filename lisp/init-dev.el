@@ -6,7 +6,7 @@
 (setq eldoc-echo-area-display-truncation-message nil
       eldoc-echo-area-use-multiline-p 1)
 
-(setq speedbar-tag-regroup-maximum-length 100)
+(setq speedbar-tag-regroup-maximum-length 1000)
 
 (use-package cc-mode
   :ensure nil
