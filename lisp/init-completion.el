@@ -4,7 +4,7 @@
 
 (minibuffer-depth-indicate-mode)
 
-(setq completion-styles '(substring flex)
+(setq completion-styles '(basic flex)
       completion-ignore-case t
       read-file-name-completion-ignore-case t
       read-buffer-completion-ignore-case t
