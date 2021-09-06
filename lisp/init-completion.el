@@ -66,7 +66,9 @@
   :bind (:map helm-map
          ("C-t" . nil)
          ("C-s" . nil)
-         ("C-|" . helm-toggle-resplit-window)))
+         ("C-|" . helm-toggle-resplit-window)
+         :map helm-command-map
+         ("C-x b" . helm-mini)))
 
 (defalias 'ev  'emacs-version)
 (defalias 'eit 'emacs-init-time)
