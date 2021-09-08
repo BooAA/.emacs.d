@@ -1,7 +1,8 @@
 ;;; -*- lexical-binding: t -*-
 
-(use-package keycast
-  :commands (keycast-mode))
+(use-package keycast)
+
+(use-package daemons)
 
 (use-package youtube-dl
   :load-path "site-lisp/youtube-dl-emacs"
@@ -12,8 +13,7 @@
 (use-package elfeed
   :custom ((elfeed-feeds '("https://www.reddit.com/r/emacs.rss"
                            "https://www.reddit.com/r/lisp.rss"
-                           "https://lwn.net/headlines/rss"
-                           "https://www.youtube.com/feeds/videos.xml?channel_id=UC9N8C0XFvTCtBGUV2ik6Q3w"))
+                           "https://lwn.net/headlines/rss"))
            (elfeed-search-filter "@3days-ago +unread")))
 
 (use-package gcmh

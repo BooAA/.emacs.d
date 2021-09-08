@@ -37,6 +37,7 @@
         magit
         ;; misc
         keycast
+        daemons
         elfeed
         gcmh
         ;; UI
