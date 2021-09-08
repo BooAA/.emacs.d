@@ -20,6 +20,11 @@
   :ensure nil
   :hook (after-init . midnight-mode))
 
+(use-package isearchb
+  :ensure nil
+  :custom (isearchb-show-completions nil)
+  :bind ("C-z" . isearchb-activate))
+
 (use-package ibuffer
   :ensure nil
   :custom (ibuffer-show-empty-filter-groups nil)
