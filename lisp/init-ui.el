@@ -61,8 +61,8 @@
 (use-package mlscroll
   :custom ((mlscroll-right-align nil)
            (mlscroll-width-chars 20)
-           (mlscroll-in-color "#D0BF8F")
-           (mlscroll-out-color "#4F4F4F"))
+           (mlscroll-in-color "#56bc56bc56bc")
+           (mlscroll-out-color "#424242"))
   :hook (after-init . mlscroll-mode))
 
 (provide 'init-ui)
