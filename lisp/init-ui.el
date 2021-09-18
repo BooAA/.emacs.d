@@ -42,10 +42,7 @@
 
 (use-package zenburn-theme
   :demand t
-  :hook (after-init . booaa/zenburn-customize)
-  :config (load-theme 'zenburn t))
-
-(defun booaa/zenburn-customize ()
+  :config
   (zenburn-with-color-variables
     (custom-theme-set-faces
      'zenburn
@@ -56,13 +53,17 @@
      ;; tab-line
      `(tab-line ((t (:background ,zenburn-bg+1 :foreground ,zenburn-fg+1 :box nil))))
      `(tab-line-tab-current ((t (:background ,zenburn-bg :foreground ,zenburn-fg+2 :box nil))))
-     `(tab-line-tab-inactive ((t (:background ,zenburn-bg+1 :foreground ,zenburn-fg+1 :box nil)))))))
+     `(tab-line-tab-inactive ((t (:background ,zenburn-bg+1 :foreground ,zenburn-fg+1 :box nil)))))
+    (custom-theme-set-variables
+     'zenburn
+     ;; mlscroll
+     `(mlscroll-in-color ,zenburn-bg+2)
+     `(mlscroll-out-color ,zenburn-bg)))
+  (load-theme 'zenburn t))
 
 (use-package mlscroll
   :custom ((mlscroll-right-align nil)
-           (mlscroll-width-chars 20)
-           (mlscroll-in-color "#56bc56bc56bc")
-           (mlscroll-out-color "#424242"))
+           (mlscroll-width-chars 20))
   :hook (after-init . mlscroll-mode))
 
 (provide 'init-ui)
