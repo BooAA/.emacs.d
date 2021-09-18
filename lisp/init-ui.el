@@ -57,7 +57,7 @@
     (custom-theme-set-variables
      'zenburn
      ;; mlscroll
-     `(mlscroll-in-color ,zenburn-bg+2)
+     `(mlscroll-in-color ,zenburn-bg+1)
      `(mlscroll-out-color ,zenburn-bg)))
   (load-theme 'zenburn t))
 
