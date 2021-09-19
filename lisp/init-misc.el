@@ -5,10 +5,9 @@
 (use-package daemons)
 
 (use-package youtube-dl
-  :load-path "site-lisp/youtube-dl-emacs"
-  :custom ((youtube-dl-directory "~/Downloads")
-           (youtube-dl-slow-rate "10M"))
-  :commands (youtube-dl youtube-dl-playlist youtube-dl-list))
+  :ensure nil
+  :custom ((youtube-dl-directory (expand-file-name "~/Downloads"))
+           (youtube-dl-slow-rate "10M")))
 
 (use-package elfeed
   :custom ((elfeed-feeds '("https://www.reddit.com/r/emacs.rss"

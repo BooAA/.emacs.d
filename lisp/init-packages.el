@@ -41,6 +41,7 @@
         keycast
         daemons
         elfeed
+        youtube-dl
         gcmh
         ;; UI
         zenburn-theme
