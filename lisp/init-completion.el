@@ -62,7 +62,9 @@
 
 (use-package helm
   :defer 0.3
-  :custom (helm-minibuffer-history-key nil)
+  :custom ((helm-minibuffer-history-key nil)
+           (helm-grep-ag-command
+            "rg --color=always --smart-case --no-heading --line-number %s %s %s"))
   :bind (:map helm-map
          ("C-t" . nil)
          ("C-s" . nil)
