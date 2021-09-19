@@ -37,6 +37,7 @@
         simple-httpd
         sly
         magit
+        imenu-list
         ;; misc
         keycast
         daemons
