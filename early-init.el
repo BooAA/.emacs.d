@@ -23,7 +23,6 @@
     (setq file-name-handler-alist old-file-name-handler-alist)
     (setq gc-cons-threshold old-gc-cons-threshold
           gc-cons-percentage old-gc-cons-percentage))
-
   (add-hook 'emacs-startup-hook #'booaa/reset-after-startup)
 
   (setq file-name-handler-alist nil)
