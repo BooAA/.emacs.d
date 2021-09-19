@@ -1,20 +1,5 @@
 ;;; -*- lexical-binding: t -*-
 
-(defvar booaa/gc-cons-threshold gc-cons-threshold)
-(defvar booaa/gc-cons-percentage gc-cons-percentage)
-(setq gc-cons-threshold  400000000
-      gc-cons-percentage 0.6)
-
-(defvar booaa/file-name-handler-alist file-name-handler-alist)
-(setq file-name-handler-alist nil)
-
-(defun booaa/reset-after-startup ()
-  (setq gc-cons-threshold booaa/gc-cons-threshold
-        gc-cons-percentage booaa/gc-cons-percentage
-        file-name-handler-alist booaa/file-name-handler-alist))
-
-(add-hook 'emacs-startup-hook #'booaa/reset-after-startup)
-
 ;; keep customization information other place and never load it
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 
