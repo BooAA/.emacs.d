@@ -40,7 +40,6 @@
         imenu-list
         ;; misc
         keycast
-        daemons
         elfeed
         youtube-dl
         gcmh

@@ -2,8 +2,6 @@
 
 (use-package keycast)
 
-(use-package daemons)
-
 (use-package youtube-dl
   :ensure nil
   :custom ((youtube-dl-directory (expand-file-name "~/Downloads"))
