@@ -19,7 +19,7 @@
   :ensure nil
   :custom ((tab-bar-show t)
            (tab-bar-new-button nil)
-           (tab-bar-close-button nil)
+           (tab-bar-close-button-show nil)
            (tab-bar-new-tab-choice "*scratch*")
            (tab-bar-select-tab-modifiers '(hyper)))
   :hook ((after-init . tab-bar-mode)))
