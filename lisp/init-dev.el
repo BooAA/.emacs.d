@@ -6,8 +6,6 @@
 (setq eldoc-echo-area-display-truncation-message nil
       eldoc-echo-area-use-multiline-p 1)
 
-(setq speedbar-tag-regroup-maximum-length 1000)
-
 (use-package cc-mode
   :ensure nil
   :custom (c-default-style '((c-mode . "linux")
@@ -22,6 +20,16 @@
   :bind (:map flymake-mode-map
          ("M-n" . flymake-goto-next-error)
          ("M-p" . flymake-goto-prev-error)))
+
+(use-package speedbar
+  :ensure nil
+  :custom (speedbar-tag-regroup-maximum-length 1000))
+
+(use-package sr-speedbar
+  :bind ("C-<f7>" . sr-speedbar-toggle))
+
+(use-package imenu-list
+  :bind ("C-<f8>" . imenu-list-smart-toggle))
 
 (use-package eglot
   :custom ((eglot-autoshutdown t)
@@ -65,7 +73,5 @@
 (use-package simple-httpd
   :custom (httpd-root "/var/www"))
 
-(use-package imenu-list
-  :bind ("C-'" . imenu-list-smart-toggle))
 
 (provide 'init-dev)

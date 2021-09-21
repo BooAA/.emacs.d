@@ -38,6 +38,7 @@
         sly
         magit
         imenu-list
+        sr-speedbar
         ;; misc
         keycast
         elfeed
