@@ -25,13 +25,14 @@
 
 (use-package eglot
   :custom ((eglot-autoshutdown t)
-           (eglot-connect-timeout 5)
+           (eglot-connect-timeout 10)
            (eglot-events-buffer-size 0)
            (eglot-extend-to-xref t)
            (eglot-server-programs '(((c-mode c++-mode)
                                      "clangd"
                                      "-j4"
                                      "--completion-style=detailed"
+                                     "--background-index"
                                      "--cross-file-rename"
                                      "--header-insertion=never"
                                      "--suggest-missing-includes"
