@@ -73,5 +73,4 @@
 (use-package simple-httpd
   :custom (httpd-root "/var/www"))
 
-
 (provide 'init-dev)
