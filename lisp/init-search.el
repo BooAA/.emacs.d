@@ -6,6 +6,8 @@
       search-default-mode t
       isearch-wrap-pause 'no)
 
+(setq xref-search-program "ripgrep")
+
 (use-package wgrep)
 
 (define-key search-map (kbd "O") #'multi-occur-in-matching-buffers)
