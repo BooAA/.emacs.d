@@ -28,6 +28,10 @@
 (use-package sr-speedbar
   :bind ("C-<f7>" . sr-speedbar-toggle))
 
+(use-package imenu
+  :ensure nil
+  :bind ("C-." . imenu))
+
 (use-package imenu-list
   :bind ("C-<f8>" . imenu-list-smart-toggle))
 
