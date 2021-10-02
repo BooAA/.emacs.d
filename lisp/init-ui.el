@@ -63,7 +63,7 @@
 
 (use-package mlscroll
   :custom ((mlscroll-right-align nil)
-           (mlscroll-width-chars 20))
+           (mlscroll-width-chars 24))
   :hook (after-init . mlscroll-mode))
 
 (provide 'init-ui)
