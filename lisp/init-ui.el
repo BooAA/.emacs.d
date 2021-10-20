@@ -62,8 +62,9 @@
   (load-theme 'zenburn t))
 
 (use-package mlscroll
+  :demand t
   :custom ((mlscroll-right-align nil)
            (mlscroll-width-chars 24))
-  :hook (after-init . mlscroll-mode))
+  :config (mlscroll-mode))
 
 (provide 'init-ui)
