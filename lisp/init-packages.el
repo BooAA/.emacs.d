@@ -25,8 +25,6 @@
         ;; completion
         company
         helm
-        ;; search and replace
-        wgrep
         ;; config and packages management
         use-package
         no-littering
