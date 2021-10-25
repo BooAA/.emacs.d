@@ -39,8 +39,7 @@
   :custom ((eglot-autoshutdown t)
            (eglot-connect-timeout 10)
            (eglot-events-buffer-size 0)
-           (eglot-extend-to-xref t))
-  :commands eglot)
+           (eglot-extend-to-xref t)))
 
 (defun eglot-imenu-get-point (one-obj-array)
   (car (eglot--range-region
@@ -60,8 +59,7 @@
 (advice-add #'eglot-imenu :filter-return #'eglot-imenu-to-simple-form)
 
 (use-package sly
-  :custom (inferior-lisp-program "sbcl")
-  :commands sly)
+  :custom (inferior-lisp-program "sbcl"))
 
 (use-package magit)
 
