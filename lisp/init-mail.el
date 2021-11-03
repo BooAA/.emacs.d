@@ -16,6 +16,6 @@
            (mu4e-use-fancy-chars t)
            (mu4e-confirm-quit nil)
            (mu4e-completing-read-function 'completing-read))
-  :commands (mu4e))
+  :commands mu4e)
 
 (provide 'init-mail)
