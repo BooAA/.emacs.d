@@ -39,11 +39,6 @@
   :ensure nil
   :hook (after-init . save-place-mode))
 
-(use-package desktop
-  :ensure nil
-  :demand t
-  :config (desktop-save-mode 1))
-
 (use-package move-text
   :hook (after-init . move-text-default-bindings))
 
