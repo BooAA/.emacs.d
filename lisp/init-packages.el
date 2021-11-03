@@ -32,7 +32,6 @@
         move-text
         ;; development tools
         eglot
-        simple-httpd
         sly
         magit
         imenu-list
