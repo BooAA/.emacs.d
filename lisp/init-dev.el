@@ -49,14 +49,14 @@
           (((DocumentSymbol) selectionRange)
            selectionRange)))))
 
-(defun eglot-imenu-to-simple-form (menu)
+(defun eglot-imenu-simple-form (menu)
   (cl-loop for form in menu
            collect (cons (car form)
                          (if (imenu--subalist-p form)
-                             (eglot-imenu-to-simple-form (cdr form))
+                             (eglot-imenu-simple-form (cdr form))
                            (eglot-imenu-get-point (cadr form))))))
 
-(advice-add #'eglot-imenu :filter-return #'eglot-imenu-to-simple-form)
+(advice-add #'eglot-imenu :filter-return #'eglot-imenu-simple-form)
 
 (use-package sly
   :custom (inferior-lisp-program "sbcl"))
