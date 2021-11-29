@@ -42,6 +42,10 @@
 (use-package move-text
   :hook (after-init . move-text-default-bindings))
 
+(use-package repeat
+  :ensure nil
+  :hook (after-init . repeat-mode))
+
 (global-set-key (kbd "C-M-<backspace>") #'backward-kill-sexp)
 (global-set-key (kbd "M-z") #'zap-up-to-char)
 (global-set-key (kbd "M-Z") #'zap-to-char)
