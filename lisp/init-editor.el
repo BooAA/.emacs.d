@@ -12,6 +12,8 @@
 
 (setq disabled-command-function nil)
 
+(setq scroll-preserve-screen-position t)
+
 (use-package recentf
   :ensure nil
   :custom (recentf-max-saved-items nil)
