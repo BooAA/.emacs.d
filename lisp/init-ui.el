@@ -24,10 +24,6 @@
                                    ;; battery-mode-line-string
                                    ))
 
-(use-package paren
-  :ensure nil
-  :hook (after-init . show-paren-mode))
-
 (use-package time
   :ensure nil
   :custom ((display-time-mail-string "")
