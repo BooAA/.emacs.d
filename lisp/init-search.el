@@ -7,7 +7,8 @@
       isearch-resume-in-command-history t)
 
 (setq xref-search-program "ripgrep"
-      xref-truncation-width 100)
+      xref-truncation-width 100
+      xref-after-jump-hook '(xref-pulse-momentarily))
 
 (define-key search-map (kbd "O") #'multi-occur-in-matching-buffers)
 (define-key search-map (kbd "g") #'lgrep)
