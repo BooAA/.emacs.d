@@ -12,11 +12,11 @@ export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 
 # some useful trays and daemons
-fcitx &
-blueman-tray &
-nm-applet &
-volumeicon &
-xfce4-power-manager &
+# fcitx &
+# blueman-tray &
+# nm-applet &
+# volumeicon &
+# xfce4-power-manager &
 
 # Disable access control for the current user.
 xhost +SI:localuser:$USER

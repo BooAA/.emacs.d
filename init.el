@@ -18,6 +18,7 @@
 (require 'init-completion)
 (require 'init-search)
 (require 'init-dev)
+(require 'init-exwm)
 (require 'init-misc)
 
 (provide 'init)

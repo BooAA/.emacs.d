@@ -41,6 +41,7 @@
         elfeed
         youtube-dl
         gcmh
+        exwm
         ;; UI
         zenburn-theme
         mlscroll
