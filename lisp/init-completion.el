@@ -65,7 +65,8 @@
   :custom ((helm-minibuffer-history-key nil)
            (helm-grep-ag-command
             "rg --color=always --smart-case --no-heading --line-number %s %s %s"))
-  :bind (:map helm-map
+  :bind (("C-c s" . helm-do-grep-ag)
+         :map helm-map
          ("C-t" . nil)
          ("C-s" . nil)
          ("C-|" . helm-toggle-resplit-window)
