@@ -17,7 +17,7 @@
 
 (use-package tab-bar
   :ensure nil
-  :custom ((tab-bar-show t)
+  :custom ((tab-bar-show nil)
            (tab-bar-new-button nil)
            (tab-bar-close-button-show nil)
            (tab-bar-new-tab-choice "*scratch*")
