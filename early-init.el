@@ -12,7 +12,7 @@
 
 (set-face-attribute 'default nil
                     :family "hack"
-                    :height 110
+                    :height 100
                     :weight 'normal
                     :width 'normal)
 
