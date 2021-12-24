@@ -19,7 +19,7 @@
                                  mode-line-position "  "
                                  (:eval (mlscroll-mode-line))))
 
-(setq-default frame-title-format '(" "
+(setq-default frame-title-format '("Emacs  "
                                    display-time-string "  "
                                    ;; battery-mode-line-string
                                    ))
