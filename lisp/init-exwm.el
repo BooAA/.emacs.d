@@ -34,7 +34,9 @@
               ([?\C-k] . [S-end delete])
               ([?\C-w] . [?\C-x])
               ([?\M-w] . [?\C-c])
-              ([?\C-y] . [?\C-v]))))
+              ([?\C-y] . [?\C-v])
+              ([?\C-s] . [f3])
+              ([?\C-r] . [S-f3]))))
   :hook (exwm-update-class . exwm-rename-buffer-class-name))
 
 (defun exwm-rename-buffer-class-name ()
