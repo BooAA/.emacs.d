@@ -89,4 +89,7 @@
 (defalias 'df 'delete-file)
 (defalias 'rf 'rename-file)
 
+(defalias 'lt 'load-theme)
+(defalias 'dt 'disable-theme)
+
 (provide 'init-completion)
