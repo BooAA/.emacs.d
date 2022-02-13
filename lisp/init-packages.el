@@ -34,8 +34,7 @@
         eglot
         sly
         magit
-        imenu-list
-        sr-speedbar
+        imenu-anywhere
         ;; misc
         keycast
         elfeed
