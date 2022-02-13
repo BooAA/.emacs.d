@@ -40,16 +40,6 @@
   :demand t
   :config
   (zenburn-with-color-variables
-    (custom-theme-set-faces
-     'zenburn
-     ;; tab-bar
-     `(tab-bar ((t (:background ,zenburn-bg+1 :foreground ,zenburn-fg+1 :box nil))))
-     `(tab-bar-tab ((t (:background ,zenburn-bg :foreground ,zenburn-fg+2 :box nil))))
-     `(tab-bar-tab-inactive ((t (:background ,zenburn-bg+1 :foreground ,zenburn-fg+1 :box nil))))
-     ;; tab-line
-     `(tab-line ((t (:background ,zenburn-bg+1 :foreground ,zenburn-fg+1 :box nil))))
-     `(tab-line-tab-current ((t (:background ,zenburn-bg :foreground ,zenburn-fg+2 :box nil))))
-     `(tab-line-tab-inactive ((t (:background ,zenburn-bg+1 :foreground ,zenburn-fg+1 :box nil)))))
     (custom-theme-set-variables
      'zenburn
      ;; mlscroll
