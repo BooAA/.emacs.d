@@ -18,16 +18,8 @@
 
 (use-package ibuffer
   :ensure nil
-  :custom (ibuffer-show-empty-filter-groups nil)
+  :custom ((ibuffer-show-empty-filter-groups nil)
+           (ibuffer-default-sorting-mode 'major-mode))
   :bind ("C-x C-b" . ibuffer))
-
-(use-package ibuffer-vc
-  :commands ibuffer-vc-set-filter-groups-by-vc-root
-  :hook (ibuffer-mode . booaa/ibuffer-set-up-preferred-filters))
-
-(defun booaa/ibuffer-set-up-preferred-filters ()
-  (ibuffer-vc-set-filter-groups-by-vc-root)
-  (unless (eq ibuffer-sorting-mode 'filename/process)
-    (ibuffer-do-sort-by-filename/process)))
 
 (provide 'init-buffer)

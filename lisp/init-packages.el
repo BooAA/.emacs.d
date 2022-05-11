@@ -23,7 +23,6 @@
         eglot
         elfeed
         helm
-        ibuffer-vc
         keycast
         magit
         move-text
