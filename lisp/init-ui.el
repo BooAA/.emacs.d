@@ -16,41 +16,10 @@
 
 (setq-default mode-line-format '((vc-mode vc-mode) "  "
                                  mode-line-buffer-identification "  "
-                                 mode-line-position "  "
-                                 (:eval (mlscroll-mode-line))))
-
-(setq-default frame-title-format '("Emacs  "
-                                   display-time-string "  "
-                                   ;; battery-mode-line-string
-                                   ))
-
-(use-package time
-  :ensure nil
-  :custom ((display-time-mail-string "")
-           (display-time-default-load-average nil)
-           (display-time-format "%m/%d %a %H:%M"))
-  :hook (after-init . display-time-mode))
-
-(use-package battery
-  :ensure nil
-  :custom (battery-mode-line-format "%B (%p%%, %t)")
-  :hook (after-init . display-battery-mode))
+                                 mode-line-position "  "))
 
 (use-package zenburn-theme
   :demand t
-  :config
-  (zenburn-with-color-variables
-    (custom-theme-set-variables
-     'zenburn
-     ;; mlscroll
-     `(mlscroll-in-color ,zenburn-bg+1)
-     `(mlscroll-out-color ,zenburn-bg)))
-  (load-theme 'zenburn t))
-
-(use-package mlscroll
-  :demand t
-  :custom ((mlscroll-right-align nil)
-           (mlscroll-width-chars 24))
-  :config (mlscroll-mode))
+  :config (load-theme 'zenburn t))
 
 (provide 'init-ui)

@@ -11,29 +11,8 @@
       completion-category-defaults nil
       completion-category-overrides '((file (styles partial-completion))))
 
-(setq completion-show-help nil)
-
-(use-package hippie-exp
-  :ensure nil
-  :custom ((hippie-expand-try-functions-list '(try-complete-file-name
-                                               try-expand-dabbrev
-                                               try-expand-dabbrev-visible
-                                               try-expand-dabbrev-from-kill
-                                               try-expand-whole-kill
-                                               try-expand-dabbrev-all-buffers
-                                               try-expand-line
-                                               try-expand-line-all-buffers))
-           (hippie-expand-verbose nil))
-  :bind ("M-/" . hippie-expand)
-  :hook (prog-mode . booaa/hippie-lisp-related-mode-setup))
-
-(defun booaa/hippie-lisp-related-mode-setup ()
-  (when (derived-mode-p 'lisp-data-mode)
-      (setq-local hippie-expand-try-functions-list
-                  (append '(try-complete-lisp-symbol
-                            try-expand-list
-                            try-expand-list-all-buffers)
-                          hippie-expand-try-functions-list))))
+(setq completion-show-help nil
+      completions-max-height (round (* (frame-height) 0.5)))
 
 (use-package company
   :custom ((company-tooltip-align-annotations t)
@@ -42,7 +21,7 @@
            (company-dabbrev-ignore-case t)
            (company-dabbrev-downcase nil)
            (company-dabbrev-code-ignore-case t)
-           (company-dabbrev-code-everwhere t)
+           (company-dabbrev-code-everywhere t)
            (company-backends '(company-capf
                                company-files
                                (company-dabbrev-code company-keywords)
@@ -50,13 +29,9 @@
   :bind (:map company-active-map
          ("C-n" . nil)
          ("C-p" . nil)
-         ("M-n" . company-select-next)
-         ("M-p" . company-select-previous)
          :map company-search-map
          ("C-n" . nil)
-         ("C-p" . nil)
-         ("M-n" . company-select-next)
-         ("M-p" . company-select-previous))
+         ("C-p" . nil))
   :hook ((after-init . global-company-mode)
          (company-mode . company-tng-mode)))
 
@@ -65,8 +40,7 @@
   :custom ((helm-minibuffer-history-key nil)
            (helm-grep-ag-command
             "rg --color=always --smart-case --no-heading --line-number %s %s %s"))
-  :bind (("C-c s" . helm-do-grep-ag)
-         :map helm-map
+  :bind (:map helm-map
          ("C-t" . nil)
          ("C-s" . nil)
          ("C-|" . helm-toggle-resplit-window)

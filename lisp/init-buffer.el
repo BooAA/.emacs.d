@@ -12,10 +12,6 @@
            (auto-revert-verbose nil))
   :hook (after-init . global-auto-revert-mode))
 
-(use-package help
-  :ensure nil
-  :hook (after-init . temp-buffer-resize-mode))
-
 (use-package midnight
   :ensure nil
   :hook (after-init . midnight-mode))

@@ -19,31 +19,18 @@
 (use-package no-littering :demand t)
 
 (setq package-selected-packages
-      '(
-        ;; buffer management
-        ibuffer-vc
-        ;; completion
-        company
-        helm
-        ;; config and packages management
-        use-package
-        no-littering
-        ;; editing
-        move-text
-        ;; development tools
+      '(company
         eglot
-        sly
-        magit
-        imenu-anywhere
-        ;; misc
-        keycast
         elfeed
-        youtube-dl
-        gcmh
-        exwm
-        ;; UI
-        zenburn-theme
-        mlscroll
-        ))
+        helm
+        ibuffer-vc
+        keycast
+        magit
+        move-text
+        no-littering
+        sly
+        use-package
+        wgrep
+        zenburn-theme))
 
 (provide 'init-packages)

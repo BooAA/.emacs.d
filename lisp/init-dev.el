@@ -21,10 +21,6 @@
          ("M-n" . flymake-goto-next-error)
          ("M-p" . flymake-goto-prev-error)))
 
-(use-package imenu-anywhere
-  :ensure nil
-  :bind ("C-." . imenu-anywhere))
-
 (use-package eglot
   :custom ((eglot-autoshutdown t)
            (eglot-connect-timeout 10)
