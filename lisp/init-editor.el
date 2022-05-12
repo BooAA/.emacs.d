@@ -29,9 +29,15 @@
   :ensure nil
   :hook (after-init . savehist-mode))
 
+(use-package recentf
+  :ensure nil
+  :custom (recentf-max-saved-items nil)
+  :bind ("C-c f" . recentf-open-files)
+  :hook (after-init . recentf-mode))
+
 (use-package repeat
   :ensure nil
-  :hook (after-init. repeat-mode))
+  :hook (after-init . repeat-mode))
 
 (use-package move-text
   :hook (after-init . move-text-default-bindings))
