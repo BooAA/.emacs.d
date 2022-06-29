@@ -1,7 +1,6 @@
 ;;; -*- lexical-binding: t -*-
 
-(setq search-default-mode t
-      isearch-wrap-pause 'no
+(setq isearch-wrap-pause 'no
       isearch-lazy-count t
       lazy-highlight-initial-delay 0.1
       isearch-resume-in-command-history t)
