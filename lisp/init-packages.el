@@ -5,7 +5,7 @@
 
 (setq package-native-compile t
       native-comp-async-report-warnings-errors 'silent
-      native-comp-compiler-options '("-O2" "-march=skylake" "-mtune=native"))
+      native-comp-compiler-options '("-O3" "-march=skylake" "-mtune=native"))
 
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
