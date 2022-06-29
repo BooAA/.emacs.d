@@ -13,10 +13,11 @@
 
 (blink-cursor-mode -1)
 (column-number-mode)
+(pixel-scroll-precision-mode)
 
 (setq-default mode-line-format '((vc-mode vc-mode) "  "
                                  mode-line-buffer-identification "  "
-                                 mode-line-position "  "))
+                                 mode-line-position))
 
 (use-package zenburn-theme
   :demand t
