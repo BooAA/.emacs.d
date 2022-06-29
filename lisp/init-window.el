@@ -5,10 +5,10 @@
 (use-package windmove
   :ensure nil
   :custom ((windmove-wrap-around t)
-           (windmove-default-keybindings '([ignore] shift))
-           (windmove-swap-states-default-keybindings '([ignore] super shift))
-           (windmove-delete-default-keybindings '("\C-x" shift))
-           (windmove-display-default-keybindings '([ignore] meta shift)))
+           (windmove-default-keybindings '([ignore] hyper))
+           (windmove-swap-states-default-keybindings '([ignore] hyper shift))
+           (windmove-delete-default-keybindings '([?\H-x] shift))
+           (windmove-display-default-keybindings '([?\H-x])))
   :hook (after-init . windmove-mode))
 
 (use-package winner
