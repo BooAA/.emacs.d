@@ -2,6 +2,8 @@
 
 (setq-default indent-tabs-mode nil)
 
+(setq backward-delete-char-untabify-method nil)
+
 (setq make-backup-files nil
       auto-save-default nil)
 
