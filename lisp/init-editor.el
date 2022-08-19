@@ -27,10 +27,6 @@
   :ensure nil
   :hook (after-init . global-so-long-mode))
 
-(use-package visual-line
-  :ensure nil
-  :hook (after-init . global-visual-line-mode))
-
 (use-package savehist
   :ensure nil
   :hook (after-init . savehist-mode))

@@ -1,5 +1,7 @@
 ;;; -*- lexical-binding: t -*-
 
+(require 'gdb-mi)
+
 (setq gdb-many-windows t
       gdb-restore-window-configuration-after-quit t)
 
