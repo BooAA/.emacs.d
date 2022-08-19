@@ -41,6 +41,10 @@
   :ensure nil
   :hook (after-init . repeat-mode))
 
+(use-package pixel-scroll
+  :ensure nil
+  :hook (after-init . pixel-scroll-precision-mode))
+
 (use-package move-text
   :hook (after-init . move-text-default-bindings))
 

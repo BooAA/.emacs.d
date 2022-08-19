@@ -13,7 +13,7 @@
 
 (blink-cursor-mode -1)
 (column-number-mode)
-(pixel-scroll-precision-mode)
+(global-visual-line-mode)
 
 (setq-default mode-line-format '((vc-mode vc-mode) "  "
                                  mode-line-buffer-identification "  "
