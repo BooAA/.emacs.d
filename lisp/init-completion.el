@@ -39,6 +39,21 @@
          ("C-p" . nil))
   :hook  (company-mode . company-tng-mode))
 
+(use-package hippie-exp
+  :ensure nil
+  :custom ((hippie-expand-try-functions-list '(try-complete-file-name
+                                               try-expand-dabbrev
+                                               try-expand-dabbrev-all-buffers
+                                               try-expand-dabbrev-from-kill
+                                               try-expand-line
+                                               try-expand-line-all-buffers
+                                               try-expand-whole-kill
+                                               try-complete-lisp-symbol
+                                               try-expand-list
+                                               try-expand-list-all-buffers))
+           (hippie-expand-verbose nil))
+  :bind ("M-/" . hippie-expand))
+
 (use-package helm
   :defer 0.3
   :custom ((helm-minibuffer-history-key nil)
