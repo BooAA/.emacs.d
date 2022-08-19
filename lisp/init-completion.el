@@ -15,7 +15,8 @@
       completions-max-height (round (* (frame-height) 0.5)))
 
 (use-package company
-  :custom ((company-tooltip-align-annotations t)
+  :custom ((company-idle-delay 0.3)
+           (company-tooltip-align-annotations t)
            (company-selection-wrap-around t)
            (company-files-chop-trailing-slash nil)
            (company-dabbrev-ignore-case t)
@@ -32,8 +33,7 @@
          :map company-search-map
          ("C-n" . nil)
          ("C-p" . nil))
-  :hook ((after-init . global-company-mode)
-         (company-mode . company-tng-mode)))
+  :hook  (company-mode . company-tng-mode))
 
 (use-package helm
   :defer 0.3
