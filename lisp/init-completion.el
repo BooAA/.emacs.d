@@ -12,7 +12,11 @@
       completion-category-overrides '((file (styles partial-completion))))
 
 (setq completion-show-help nil
+      completion-wrap-movement t
+      completion-cycle-threshold 3
       completions-max-height (round (* (frame-height) 0.5)))
+
+(setq tab-always-indent 'complete)
 
 (use-package company
   :custom ((company-idle-delay 0.3)
