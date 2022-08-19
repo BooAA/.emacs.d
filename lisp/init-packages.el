@@ -22,14 +22,17 @@
       '(company
         eglot
         elfeed
+        evil
         helm
         keycast
         magit
         move-text
         no-littering
+        notmuch
         sly
         use-package
         wgrep
+        winum
         zenburn-theme))
 
 (provide 'init-packages)

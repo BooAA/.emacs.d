@@ -19,4 +19,6 @@
            (mu4e-completing-read-function 'completing-read))
   :commands mu4e)
 
+(use-package notmuch)
+
 (provide 'init-mail)

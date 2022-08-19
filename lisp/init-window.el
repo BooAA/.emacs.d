@@ -24,4 +24,7 @@
            (tab-bar-select-tab-modifiers '(hyper)))
   :hook ((after-init . tab-bar-mode)))
 
+(use-package winum
+  :hook (after-init . winum-mode))
+
 (provide 'init-window)

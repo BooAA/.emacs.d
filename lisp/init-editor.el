@@ -48,6 +48,9 @@
 (use-package move-text
   :hook (after-init . move-text-default-bindings))
 
+(use-package evil
+  :init (setq evil-disable-insert-state-bindings t))
+
 (global-set-key (kbd "C-%") #'replace-regexp)
 (global-set-key (kbd "M-R") #'raise-sexp)
 
