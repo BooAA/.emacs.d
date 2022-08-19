@@ -22,4 +22,8 @@
            (ibuffer-default-sorting-mode 'major-mode))
   :bind ("C-x C-b" . ibuffer))
 
+(use-package isearchb
+  :ensure nil
+  :bind ("C-;" . isearchb-activate))
+
 (provide 'init-buffer)
