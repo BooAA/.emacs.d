@@ -1,22 +1,26 @@
 ;;; -*- lexical-binding: t -*-
 
-(setq enable-recursive-minibuffers t)
+(setopt enable-recursive-minibuffers t)
 
-(minibuffer-depth-indicate-mode)
+(setopt completion-styles '(basic flex)
+        completion-ignore-case t
+        read-file-name-completion-ignore-case t
+        read-buffer-completion-ignore-case t
+        completion-category-defaults nil
+        completion-category-overrides '((file (styles partial-completion))))
 
-(setq completion-styles '(basic flex)
-      completion-ignore-case t
-      read-file-name-completion-ignore-case t
-      read-buffer-completion-ignore-case t
-      completion-category-defaults nil
-      completion-category-overrides '((file (styles partial-completion))))
+(setopt completion-show-help nil
+        completion-cycle-threshold 3
+        completions-max-height (round (* (frame-height) 0.5)))
 
-(setq completion-show-help nil
-      completion-wrap-movement t
-      completion-cycle-threshold 3
-      completions-max-height (round (* (frame-height) 0.5)))
+(setopt tab-always-indent 'complete)
 
-(setq tab-always-indent 'complete)
+(setopt history-length t
+        history-delete-duplicates t)
+
+(use-package mb-depth
+  :ensure nil
+  :hook (after-init . minibuffer-depth-indicate-mode))
 
 (use-package company
   :custom ((company-idle-delay 0.3)

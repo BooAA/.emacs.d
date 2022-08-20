@@ -1,12 +1,20 @@
 ;;; -*- lexical-binding: t -*-
 
-(require 'gdb-mi)
+(use-package eldoc
+  :ensure nil
+  :custom ((eldoc-echo-area-display-truncation-message nil)
+           (eldoc-echo-area-use-multiline-p 1)))
 
-(setq gdb-many-windows t
-      gdb-restore-window-configuration-after-quit t)
+(use-package xref
+  :ensure nil
+  :custom ((xref-search-program 'ripgrep)
+           (xref-truncation-width 100)
+           (xref-after-jump-hook '(xref-pulse-momentarily))))
 
-(setq eldoc-echo-area-display-truncation-message nil
-      eldoc-echo-area-use-multiline-p 1)
+(use-package gdb-mi
+  :ensure nil
+  :custom ((gdb-many-windows t)
+           (gdb-restore-window-configuration-after-quit t)))
 
 (use-package cc-mode
   :ensure nil

@@ -3,9 +3,7 @@
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 
-(setq package-native-compile t
-      native-comp-async-report-warnings-errors 'silent
-      native-comp-compiler-options '("-O3" "-march=skylake" "-mtune=native"))
+(setopt package-native-compile t)
 
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)

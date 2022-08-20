@@ -1,13 +1,11 @@
 ;;; -*- lexical-binding: t -*-
 
-(setq inhibit-startup-screen t)
+(setopt inhibit-startup-screen t)
 
-(setq use-short-answers t)
+(setopt use-short-answers t)
 
-(setq file-name-shadow-properties '(invisible t))
-
-(setq confirm-kill-emacs nil
-      confirm-kill-processes nil)
+(setopt confirm-kill-emacs nil
+        confirm-kill-processes nil)
 
 (setq custom--inhibit-theme-enable nil)
 
@@ -18,6 +16,10 @@
 (setq-default mode-line-format '((vc-mode vc-mode) "  "
                                  mode-line-buffer-identification "  "
                                  mode-line-position))
+
+(use-package rfn-eshadow
+  :ensure nil
+  :custom (file-name-shadow-properties '(invisible t)))
 
 (use-package zenburn-theme
   :demand t

@@ -1,18 +1,22 @@
 ;;; -*- lexical-binding: t -*-
 
-(setq-default indent-tabs-mode nil)
+(setopt indent-tabs-mode nil)
 
-(setq backward-delete-char-untabify-method nil)
+(setopt backward-delete-char-untabify-method nil)
 
-(setq make-backup-files nil
-      auto-save-default nil)
+(setopt make-backup-files nil
+        auto-save-default nil)
 
-(setq history-length t
-      history-delete-duplicates t)
+(setopt disabled-command-function nil)
 
-(setq disabled-command-function nil)
+(setopt scroll-preserve-screen-position t)
 
-(setq scroll-preserve-screen-position t)
+(use-package isearch
+  :ensure nil
+  :custom ((isearch-wrap-pause 'no)
+           (isearh-lazy-count t)
+           (lazy-highlight-initial-delay 0.1)
+           (isearch-resume-in-command-history t)))
 
 (use-package delsel
   :ensure nil
@@ -51,10 +55,15 @@
 (use-package evil
   :init (setq evil-disable-insert-state-bindings t))
 
+(use-package wgrep)
+
 (global-set-key (kbd "C-%") #'replace-regexp)
 (global-set-key (kbd "M-R") #'raise-sexp)
 
 (global-set-key (kbd "C-h /") #'apropos)
 (global-set-key (kbd "C-h u") #'apropos-user-option)
+
+(define-key search-map (kbd "g") #'lgrep)
+(define-key search-map (kbd "G") #'rgrep)
 
 (provide 'init-editor)
