@@ -14,7 +14,7 @@
 (use-package isearch
   :ensure nil
   :custom ((isearch-wrap-pause 'no)
-           (isearh-lazy-count t)
+           (isearch-lazy-count t)
            (lazy-highlight-initial-delay 0.1)
            (isearch-resume-in-command-history t)))
 
