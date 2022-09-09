@@ -1,6 +1,6 @@
 ;;; -*- lexical-binding: t -*-
 
-(setq switch-to-buffer-obey-display-actions t)
+(setopt switch-to-buffer-obey-display-actions t)
 
 (use-package windmove
   :ensure nil

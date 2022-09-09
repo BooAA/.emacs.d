@@ -13,9 +13,9 @@
 (column-number-mode)
 (global-visual-line-mode)
 
-(setq-default mode-line-format '((vc-mode vc-mode) "  "
-                                 mode-line-buffer-identification "  "
-                                 mode-line-position))
+(setopt mode-line-format '((vc-mode vc-mode) "  "
+                           mode-line-buffer-identification "  "
+                           mode-line-position))
 
 (use-package rfn-eshadow
   :ensure nil
