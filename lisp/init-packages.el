@@ -12,7 +12,8 @@
 (require 'use-package)
 (setopt use-package-always-ensure t
         use-package-always-defer t
-        use-package-expand-minimally t)
+        use-package-expand-minimally t
+        use-package-enable-imenu-support t)
 
 (use-package no-littering :demand t)
 
