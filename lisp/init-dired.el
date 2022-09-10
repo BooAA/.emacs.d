@@ -1,5 +1,7 @@
 ;;; -*- lexical-binding: t -*-
 
+(setopt delete-by-moving-to-trash t)
+
 (use-package dired
   :ensure nil
   :custom ((dired-dwim-target t)
