@@ -2,6 +2,8 @@
 
 (setopt inhibit-startup-screen t)
 
+(setopt ring-bell-function #'ignore)
+
 (setopt use-short-answers t)
 
 (setopt confirm-kill-emacs nil
@@ -17,12 +19,14 @@
                            mode-line-buffer-identification "  "
                            mode-line-position))
 
-(use-package rfn-eshadow
-  :ensure nil
-  :custom (file-name-shadow-properties '(invisible t)))
+(use-package doom-themes)
+
+(use-package spacemacs-theme)
 
 (use-package zenburn-theme
   :demand t
   :config (load-theme 'zenburn t))
+
+(use-package helm-themes)
 
 (provide 'init-ui)

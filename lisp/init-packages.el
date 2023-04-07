@@ -5,10 +5,6 @@
 
 (setopt package-native-compile t)
 
-(unless (package-installed-p 'use-package)
-  (package-refresh-contents)
-  (package-install 'use-package))
-
 (require 'use-package)
 (setopt use-package-always-ensure t
         use-package-always-defer t
@@ -17,21 +13,45 @@
 
 (use-package no-littering :demand t)
 
+(use-package gcmh
+  :demand t
+  :config (gcmh-mode 1))
+
 (setopt package-selected-packages
-        '(company
-          eglot
-          elfeed
+        '(
+          ;; editing utilities
+          crux
+          easy-kill
           evil
+          move-dup
+          wgrep
+          ;; completion
+          company
+          consult
+          consult-company
+          marginalia
+          orderless
+          vertico
           helm
-          keycast
+          helm-company
+          ;; development
+          consult-eglot
+          ggtags
+          helm-gtags
+          sly
           magit
-          move-text
+          ;; misc
+          elfeed
+          gcmh
+          keycast
           no-littering
           notmuch
-          sly
-          use-package
-          wgrep
           winum
-          zenburn-theme))
+          ;; theme
+          spacemacs-theme
+          doom-themes
+          zenburn-theme
+          helm-themes
+          ))
 
 (provide 'init-packages)

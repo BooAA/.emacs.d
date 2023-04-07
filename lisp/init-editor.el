@@ -49,8 +49,16 @@
   :ensure nil
   :hook (after-init . pixel-scroll-precision-mode))
 
-(use-package move-text
-  :hook (after-init . move-text-default-bindings))
+(use-package move-dup
+  :bind (("M-<up>" . move-dup-move-lines-up)
+         ("M-<down>" . move-dup-move-lines-down)))
+
+(use-package easy-kill
+  :bind ([remap kill-region-save] . easy-kill))
+
+(use-package crux
+  :bind (("S-<return>" . crux-smart-open-line)
+         ("C-S-<return>" . crux-smart-open-line-above)))
 
 (use-package evil
   :init (setq evil-disable-insert-state-bindings t))
@@ -65,5 +73,7 @@
 
 (define-key search-map (kbd "g") #'lgrep)
 (define-key search-map (kbd "G") #'rgrep)
+
+(define-key search-map (kbd "F") #'find-name-dired)
 
 (provide 'init-editor)

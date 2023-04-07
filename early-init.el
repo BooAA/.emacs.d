@@ -11,12 +11,11 @@
 (push '(fullscreen . maximized) initial-frame-alist)
 
 (set-face-attribute 'default nil
-                    :family "monospace"
-                    :height 100
+                    :family "hack"
+                    :height 110
                     :weight 'normal
                     :width 'normal)
 
-(setq gc-cons-threshold 8000000
-      gc-cons-percentage 0.6)
+(setopt gc-cons-threshold most-positive-fixnum)
 
 (provide 'early-init)

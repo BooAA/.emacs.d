@@ -16,6 +16,10 @@
   :ensure nil
   :hook (after-init . midnight-mode))
 
+(use-package help
+  :ensure nil
+  :custom (help-window-keep-selected t))
+
 (use-package ibuffer
   :ensure nil
   :custom ((ibuffer-show-empty-filter-groups nil)
