@@ -1,0 +1,28 @@
+#!/bin/sh
+
+# Set keyboard repeat rate.
+xset r rate 190 75
+
+# Set default cursor.
+xsetroot -cursor_name left_ptr
+
+# specify input method
+# export XMODIFIERS=@im=fcitx
+# export GTK_IM_MODULE=fcitx
+# export QT_IM_MODULE=fcitx
+
+# some useful trays and daemons
+# fcitx5 &
+# blueman-tray &
+# nm-applet &
+# volumeicon &
+# xfce4-power-manager &
+
+# Disable access control for the current user.
+xhost +SI:localuser:$USER
+
+# Make Java applications aware this is a non-reparenting window manager.
+export _JAVA_AWT_WM_NONREPARENTING=1
+
+# launch emacs and enable exwm
+exec dbus-launch --exit-with-session emacs --eval "(exwm-enable)"

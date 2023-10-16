@@ -8,7 +8,7 @@
 (push '(left-fringe . 2) default-frame-alist)
 (push '(right-fringe . 2) default-frame-alist)
 
-(push '(fullscreen . maximized) initial-frame-alist)
+;; (push '(fullscreen . maximized) initial-frame-alist)
 
 (set-face-attribute 'default nil
                     :family "hack"

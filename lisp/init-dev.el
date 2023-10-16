@@ -24,6 +24,20 @@
                              (awk-mode . "awk")
                              (other . "gnu"))))
 
+(use-package treesit
+  :ensure nil
+  :custom ((treesit-font-lock-level 2)))
+
+(use-package c-ts-mode
+  :ensure nil
+  :demand t
+  :custom (c-ts-mode-indent-style 'linux)
+  :config
+  (add-to-list 'major-mode-remap-alist '(c-mode . c-ts-mode))
+  (add-to-list 'major-mode-remap-alist '(c++-mode . c++-ts-mode))
+  (add-to-list 'major-mode-remap-alist
+               '(c-or-c++-mode . c-or-c++-ts-mode)))
+
 (use-package flymake
   :ensure nil
   :custom (flymake-wrap-around t)
@@ -47,8 +61,6 @@
            (eglot-extend-to-xref t)
            (eglot-sync-connect nil)
            (eglot-ignored-server-capabilites '(:inlayHintProvider))))
-
-(use-package consult-eglot)
 
 (use-package sly
   :custom (inferior-lisp-program "sbcl"))
@@ -78,12 +90,6 @@
          ("a" . ggtags-find-tag-regexp)
          ("d" . ggtags-show-definition))
   :hook (c-mode . ggtags-mode))
-
-(use-package helm-gtags
-  :custom ((helm-gtags-ignore-case t)
-           (helm-gtags-cache-select-result t)
-           (helm-gtags-direct-helm-completing t))
-  :hook (c-mode . helm-gtags-mode))
 
 (use-package magit)
 

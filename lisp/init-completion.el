@@ -2,12 +2,10 @@
 
 (setopt enable-recursive-minibuffers t)
 
-(setopt completion-styles '(basic)
-        completion-ignore-case t
+(setopt completion-ignore-case t
         read-file-name-completion-ignore-case t
         read-buffer-completion-ignore-case t
-        completion-category-defaults nil
-        completion-category-overrides nil)
+        completion-category-overrides '((eglot (styles basic flex))))
 
 (setopt completion-show-help nil
         completions-max-height (round (* (frame-height) 0.3)))
@@ -67,18 +65,26 @@
   :bind (:map helm-command-map
          ("C-M-i" . helm-company)))
 
+(use-package helm-gtags
+  :custom ((helm-gtags-ignore-case t)
+           (helm-gtags-cache-select-result t)
+           (helm-gtags-direct-helm-completing t))
+  :hook (c-mode . helm-gtags-mode))
+
+(use-package helm-themes)
+
 (use-package vertico
   :custom (vertico-cycle t)
-  :hook (vertico-mode . booaa/vertico-setup)
+  :hook (vertico-mode . vertico-plugin-setup)
   :preface
-  (defun booaa/vertico-setup ()
+  (defun vertico-plugin-setup ()
     (if vertico-mode
         (progn
           (marginalia-mode)
-          (setopt completion-styles '(basic orderless))
+          (add-to-list 'completion-styles 'orderless t)
           (global-set-key (kbd "C-x c") 'consult-command-map))
       (marginalia-mode -1)
-      (setopt completion-styles '(basic))
+      (delq 'orderless completion-styles)
       (global-set-key (kbd "C-x c") 'helm-command-prefix))))
 
 (use-package vertico-multiform
@@ -122,6 +128,8 @@
 (use-package consult-company
   :bind (:map consult-command-map
          ("C-M-i" . consult-company)))
+
+(use-package consult-eglot)
 
 (defalias 'ev  'emacs-version)
 (defalias 'eit 'emacs-init-time)

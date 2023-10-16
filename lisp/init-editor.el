@@ -67,6 +67,7 @@
 
 (global-set-key (kbd "C-%") #'replace-regexp)
 (global-set-key (kbd "M-R") #'raise-sexp)
+(global-set-key (kbd "C-<return>") #'duplicate-line)
 
 (global-set-key (kbd "C-h /") #'apropos)
 (global-set-key (kbd "C-h u") #'apropos-user-option)

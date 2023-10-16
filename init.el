@@ -19,6 +19,8 @@
 (require 'init-shell)
 (require 'init-completion)
 (require 'init-dev)
+(require 'init-mail)
 (require 'init-misc)
+(require 'init-exwm)
 
 (provide 'init)

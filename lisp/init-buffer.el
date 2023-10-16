@@ -20,14 +20,22 @@
   :ensure nil
   :custom (help-window-keep-selected t))
 
+(use-package isearchb
+  :ensure nil
+  :bind ("C-." . isearchb-activate))
+
 (use-package ibuffer
   :ensure nil
   :custom ((ibuffer-show-empty-filter-groups nil)
            (ibuffer-default-sorting-mode 'major-mode))
   :bind ("C-x C-b" . ibuffer))
 
-(use-package isearchb
-  :ensure nil
-  :bind ("C-;" . isearchb-activate))
+(use-package ibuffer-vc
+  :preface
+  (defun ibuffer-vc-setup ()
+    (ibuffer-vc-set-filter-groups-by-vc-root)
+    (unless (eq ibuffer-sorting-mode 'alphabetic)
+      (ibuffer-do-sort-by-alphabetic)))
+  :hook (ibuffer . ibuffer-vc-setup))
 
 (provide 'init-buffer)

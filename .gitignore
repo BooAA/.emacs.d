@@ -4,3 +4,4 @@ etc/
 var/
 eln-cache/
 transient/
+tree-sitter/

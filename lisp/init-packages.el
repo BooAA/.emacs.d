@@ -19,39 +19,63 @@
 
 (setopt package-selected-packages
         '(
+          ;; theme
+          doom-themes
+          spacemacs-theme
+          zenburn-theme
           ;; editing utilities
           crux
           easy-kill
           evil
           move-dup
           wgrep
+          ;; window
+          winum          
+          ;; buffer
+          ibuffer-vc
+          ;; shell and terminal
+          bash-completion
+          coterm
+          detached
+          eat
           ;; completion
           company
-          consult
-          consult-company
-          marginalia
-          orderless
-          vertico
+          ;; helm
           helm
           helm-company
-          ;; development
-          consult-eglot
-          ggtags
+          helm-themes
           helm-gtags
+          ;; vertico
+          vertico          
+          marginalia
+          orderless
+          consult
+          consult-company
+          consult-eglot
+          ;; development
+          ggtags
           sly
           magit
-          ;; misc
-          elfeed
-          gcmh
-          keycast
-          no-littering
+          ;; mail
           notmuch
-          winum
-          ;; theme
-          spacemacs-theme
-          doom-themes
-          zenburn-theme
-          helm-themes
+          ;; exwm
+          exwm
+          scrot
+          pulseaudio-control
+          enwc
+          bluetooth
+          ednc
+          echo-bar
+          insecure-lock
+          ;; misc
+          no-littering
+          gcmh
+          elfeed
+          engine-mode
+          keycast
+          md4rd
+          sx
+          telega
           ))
 
 (provide 'init-packages)
