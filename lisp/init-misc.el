@@ -28,7 +28,8 @@
 (use-package xwidget
   :preface
   (defun xwidget-webkit-zoom-4k ()
-    (xwidget-webkit-zoom (xwidget-webkit-current-session) 0.5))
+    (when (= (display-pixel-width) 3840)
+      (xwidget-webkit-zoom (xwidget-webkit-current-session) 0.5)))
   :bind (:map xwidget-webkit-edit-mode-map
          ("ESC" . xwidget-webkit-edit-mode))
   :hook (xwidget-webkit-mode . xwidget-webkit-zoom-4k))
