@@ -4,6 +4,13 @@
 
 (setopt backward-delete-char-untabify-method nil)
 
+(setopt bidi-display-reordering nil
+        bidi-inhibit-bpa t)
+
+(setopt long-line-threshold 1000
+        large-hscroll-threshold 1000
+        syntax-wholeline-max 1000)
+
 (setopt make-backup-files nil
         auto-save-default nil)
 
@@ -65,6 +72,14 @@
 
 (use-package wgrep)
 
+(use-package urgrep
+  :custom ((urgrep-search-regexp t)
+           (urgrep-preferred-tools '(ripgrep)))
+  :bind ("M-s G" . urgrep))
+
+(use-package grep
+  :custom (grep-template "ugrep --color=always -0Iinr -e <R>"))
+
 (global-set-key (kbd "C-%") #'replace-regexp)
 (global-set-key (kbd "M-R") #'raise-sexp)
 (global-set-key (kbd "C-<return>") #'duplicate-line)
@@ -73,7 +88,7 @@
 (global-set-key (kbd "C-h u") #'apropos-user-option)
 
 (define-key search-map (kbd "g") #'lgrep)
-(define-key search-map (kbd "G") #'rgrep)
+;; (define-key search-map (kbd "G") #'rgrep)
 
 (define-key search-map (kbd "F") #'find-name-dired)
 

@@ -20,6 +20,7 @@
 (setopt package-selected-packages
         '(
           ;; theme
+          crazy-theme
           doom-themes
           spacemacs-theme
           zenburn-theme
@@ -29,15 +30,19 @@
           evil
           move-dup
           wgrep
+          urgrep
           ;; window
           winum          
           ;; buffer
           ibuffer-vc
+          bufferlo
           ;; shell and terminal
           bash-completion
           coterm
           detached
           eat
+          vterm
+          project-shells
           ;; completion
           company
           ;; helm
@@ -76,6 +81,9 @@
           md4rd
           sx
           telega
+          xwwp
+          speed-type
+          google-translate
           ))
 
 (provide 'init-packages)

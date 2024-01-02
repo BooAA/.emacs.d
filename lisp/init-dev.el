@@ -31,12 +31,16 @@
 (use-package c-ts-mode
   :ensure nil
   :demand t
-  :custom (c-ts-mode-indent-style 'linux)
+  :custom ((c-ts-mode-indent-style 'linux)
+           (c-ts-mode-indent-offset 8))
   :config
   (add-to-list 'major-mode-remap-alist '(c-mode . c-ts-mode))
   (add-to-list 'major-mode-remap-alist '(c++-mode . c++-ts-mode))
   (add-to-list 'major-mode-remap-alist
                '(c-or-c++-mode . c-or-c++-ts-mode)))
+
+(use-package lua-ts-mode
+  :mode "\\.lua\\'")
 
 (use-package flymake
   :ensure nil

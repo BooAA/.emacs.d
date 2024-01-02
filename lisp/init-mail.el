@@ -20,7 +20,7 @@
   :load-path "/usr/local/share/emacs/site-lisp/mu4e"
   :custom ((mu4e-get-mail-command "mbsync --all")
            (mu4e-update-interval 100)
-           (mu4e-hide-index-message t)
+           (mu4e-hide-index-messages t)
            (mu4e-split-view 'vertical)
            (mu4e-headers-visible-columns (/ (frame-width) 2))
            (mu4e-use-fancy-chars t)

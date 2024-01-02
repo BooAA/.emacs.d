@@ -1,18 +1,22 @@
 #!/bin/sh
 
 # Set keyboard repeat rate.
-xset r rate 190 75
+# xset r rate 190 75
 
 # Set default cursor.
 xsetroot -cursor_name left_ptr
 
 # specify input method
-# export XMODIFIERS=@im=fcitx
-# export GTK_IM_MODULE=fcitx
-# export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+
+export GDK_SCALE=2
+export QT_SCALE_FACTOR=2
+export QT_AUTO_SCREEN_SCALE_FACTOR=0
 
 # some useful trays and daemons
-# fcitx5 &
+fcitx5 &
 # blueman-tray &
 # nm-applet &
 # volumeicon &

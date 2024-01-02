@@ -36,6 +36,15 @@
     (ibuffer-vc-set-filter-groups-by-vc-root)
     (unless (eq ibuffer-sorting-mode 'alphabetic)
       (ibuffer-do-sort-by-alphabetic)))
+  :custom (ibuffer-vc-skip-if-remote nil)
   :hook (ibuffer . ibuffer-vc-setup))
+
+(use-package bufferlo
+  :bind (("C-c b b" . bufferlo-switch-to-buffer)
+         ("C-c b B" . bufferlo-list-buffers)
+         ("C-c b r" . bufferlo-remove)
+         ("C-c b c" . bufferlo-clear)
+         ("C-c b f" . bufferlo-find-buffer-switch))
+  :hook (after-init . bufferlo-mode))
 
 (provide 'init-buffer)
