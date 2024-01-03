@@ -87,6 +87,8 @@
                            ("https://lwn.net/headlines/rss" linux)))
            (elfeed-search-filter "@3days-ago +unread")))
 
+(use-package hackernews)
+
 (use-package md4rd
   :custom (md4rd-subs-active '(emacs lisp Common_Lisp unixporn linux)))
 

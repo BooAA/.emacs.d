@@ -75,7 +75,7 @@
 (use-package urgrep
   :custom ((urgrep-search-regexp t)
            (urgrep-preferred-tools '(ripgrep)))
-  :bind ("M-s G" . urgrep))
+  :bind ("M-s u" . urgrep))
 
 (use-package grep
   :custom (grep-template "ugrep --color=always -0Iinr -e <R>"))
@@ -88,8 +88,8 @@
 (global-set-key (kbd "C-h u") #'apropos-user-option)
 
 (define-key search-map (kbd "g") #'lgrep)
-;; (define-key search-map (kbd "G") #'rgrep)
+(define-key search-map (kbd "G") #'rgrep)
 
-(define-key search-map (kbd "F") #'find-name-dired)
+(define-key search-map (kbd "f") #'find-name-dired)
 
 (provide 'init-editor)

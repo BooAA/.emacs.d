@@ -6,3 +6,4 @@ eln-cache/
 transient/
 site-lisp/
 tree-sitter/
+detached/

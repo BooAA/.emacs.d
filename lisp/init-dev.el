@@ -66,6 +66,9 @@
            (eglot-sync-connect nil)
            (eglot-ignored-server-capabilites '(:inlayHintProvider))))
 
+(use-package projectile
+  :demand t)
+
 (use-package sly
   :custom (inferior-lisp-program "sbcl"))
 

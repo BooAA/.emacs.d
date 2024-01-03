@@ -39,9 +39,9 @@
           ;; shell and terminal
           bash-completion
           coterm
-          detached
           eat
           vterm
+          detached
           project-shells
           ;; completion
           company
@@ -58,6 +58,7 @@
           consult-company
           consult-eglot
           ;; development
+          projectile
           ggtags
           sly
           magit
@@ -76,6 +77,7 @@
           no-littering
           gcmh
           elfeed
+          hackernews
           engine-mode
           keycast
           md4rd
