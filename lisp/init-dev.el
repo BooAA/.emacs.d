@@ -1,5 +1,7 @@
 ;;; -*- lexical-binding: t -*-
 
+(setopt vc-handled-backends '(Git))
+
 (use-package eldoc
   :ensure nil
   :custom ((eldoc-echo-area-display-truncation-message nil)
