@@ -5,7 +5,7 @@
 (with-eval-after-load 'tramp-sh
   (setq tramp-default-remote-shell "/bin/bash"
         tramp-ssh-controlmaster-options
-        "-o ControlPath=%%C -o ControlMaster=auto -o ControlPersist=no"))
+        "-o ControlPath=%%C -o ControlMaster=auto -o ControlPersist=yes"))
 
 (use-package comint
   :ensure nil

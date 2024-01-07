@@ -4,6 +4,6 @@ etc/
 var/
 eln-cache/
 transient/
-site-lisp/
 tree-sitter/
 detached/
+webkit/

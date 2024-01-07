@@ -64,7 +64,7 @@
           magit
           ;; mail
           notmuch
-          ;; exwm
+          ;; desktop environment
           exwm
           scrot
           pulseaudio-control
@@ -86,6 +86,9 @@
           xwwp
           speed-type
           google-translate
+          debbugs
+          pdf-tools
+          transmission
           ))
 
 (provide 'init-packages)

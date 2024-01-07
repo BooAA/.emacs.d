@@ -108,4 +108,14 @@
          ("C-c t q" . google-translate-query-translate)
          ("C-c t s" . google-translate-smooth-translate)))
 
+(use-package debbugs)
+
+(use-package pdf-tools)
+
+(use-package transmission)
+
+(use-package webkit
+  :load-path "site-lisp/emacs-webkit/"
+  :commands webkit)
+
 (provide 'init-misc)
