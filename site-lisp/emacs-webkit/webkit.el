@@ -79,7 +79,7 @@
 
 (require 'browse-url)
 (require 'eww)
-(require 'org)
+(require 'ol)
 
 (defvar webkit--id)
 (defvar webkit--buffers)

@@ -21,7 +21,7 @@
 (require 'init-dev)
 (require 'init-mail)
 (require 'init-misc)
-;; (require 'init-exwm)
+(require 'init-exwm)
 ;; (require 'init-eaf)
 
 (provide 'init)

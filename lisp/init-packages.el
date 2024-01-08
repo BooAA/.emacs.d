@@ -83,12 +83,17 @@
           md4rd
           sx
           telega
-          xwwp
+          xwwp-ace
           speed-type
           google-translate
           debbugs
           pdf-tools
           transmission
           ))
+
+(setopt package-vc-selected-packages
+        '((scrot :url "https://github.com/dakra/scrot.el.git")
+          (xwwp-ace :url "https://github.com/kchanqvq/xwwp.git")
+          (crazy-theme :url "https://github.com/eval-exec/crazy-theme.el")))
 
 (provide 'init-packages)

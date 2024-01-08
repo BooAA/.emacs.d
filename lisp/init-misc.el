@@ -34,17 +34,11 @@
          ("ESC" . xwidget-webkit-edit-mode))
   :hook (xwidget-webkit-mode . xwidget-webkit-zoom-4k))
 
-(use-package xwwp
-  :after xwidget
-  :load-path "site-lisp/xwwp/"
-  :custom (xwwp-follow-link-completion-system 'ido)
-  :bind (:map xwidget-webkit-mode-map
-         ("v" . xwwp-follow-link)))
-
 (use-package xwwp-ace
   :after xwidget
-  :load-path "site-lisp/xwwp/"
+  :vc (:url "https://github.com/kchanqvq/xwwp.git")
   :bind (:map xwidget-webkit-mode-map
+         ("v" . xwwp-follow-link)
          ("t" . xwwp-ace-toggle)))
 
 (use-package engine-mode
