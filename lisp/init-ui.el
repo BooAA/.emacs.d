@@ -24,8 +24,8 @@
 
 (use-package window-divider
   :ensure nil
-  :custom ((window-divider-default-bottom-width 8)
-           (window-divider-default-right-width 8))
+  :custom ((window-divider-default-bottom-width 4)
+           (window-divider-default-right-width 4))
   :hook (after-init . window-divider-mode))
 
 (use-package crazy-theme
